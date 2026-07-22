@@ -98,6 +98,7 @@ def book_appointment(slug, patient_id):
 
 
 @patient_bp.route('/c/<slug>/book')
+@patient_bp.route('/c/<slug>/book-direct')
 def clinic_book_direct(slug):
     """Direct appointment booking page (without triage)."""
     clinic = Clinic.query.filter_by(slug=slug).first()
