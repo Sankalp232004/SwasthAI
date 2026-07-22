@@ -1736,7 +1736,7 @@ def call_next_patient():
                 clinic_id = doctor_rec.clinic_id
                 session['clinic_id'] = clinic_id
         
-        data = request.get_json() or {}
+        data = request.get_json(silent=True) or {}
         patient_type = data.get('type')  # 'appointment', 'walkin', or None for auto
         patient_id = data.get('id')  # Specific patient/appointment ID
         
