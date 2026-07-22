@@ -1557,3 +1557,64 @@ label, .form-label {
 .text-on-gradient {
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
+
+/* Global Footer Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.app-footer {
+    background: transparent;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.landing-page .app-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.app-footer p {
+    color: #6c757d;
+}
+
+.landing-page .app-footer p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.footer-link {
+    color: #495057;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-link:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.landing-page .footer-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.landing-page .footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-sep {
+    color: #adb5bd;
+}
+
+.landing-page .footer-sep {
+    color: rgba(255, 255, 255, 0.4);
+}
+

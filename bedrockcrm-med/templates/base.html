@@ -65,6 +65,120 @@
         {% block content %}{% endblock %}
     </main>
     
+    <!-- Footer -->
+    <footer class="app-footer text-center py-4">
+        <div class="container">
+            <p class="mb-2 small">&copy; 2026 Swasthai</p>
+            <div class="footer-links d-flex justify-content-center align-items-center gap-2 flex-wrap small">
+                <a href="https://linkedin.com/company/swasthai-ai" target="_blank" rel="noopener" class="footer-link">
+                    <i class="bi bi-linkedin text-primary me-1"></i>LinkedIn
+                </a>
+                <span class="footer-sep">|</span>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal" class="footer-link">Privacy Policy</a>
+                <span class="footer-sep">|</span>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="footer-link">Terms</a>
+                <span class="footer-sep">|</span>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="footer-link">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold text-dark" id="privacyPolicyModalLabel">
+                        <i class="bi bi-shield-check text-primary me-2"></i>Privacy Policy
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <p>At <strong>SwasthAI</strong>, we prioritize the confidentiality, security, and privacy of patient health information.</p>
+                    <h6 class="fw-bold mt-3">Data Collection & Use</h6>
+                    <p class="small text-secondary">Information collected during triage (symptoms, vital signs, age, contact details) is strictly utilized for medical prioritization algorithms, appointment scheduling, and clinic workflow management.</p>
+                    <h6 class="fw-bold mt-3">Data Protection</h6>
+                    <p class="small text-secondary">All medical inputs are encrypted during transmission and storage. Access is restricted strictly to authorized clinic staff and doctors.</p>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold text-dark" id="termsModalLabel">
+                        <i class="bi bi-file-earmark-text text-primary me-2"></i>Terms of Service
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <p>Welcome to <strong>SwasthAI</strong>. By accessing our platform, you agree to these Terms of Service.</p>
+                    <h6 class="fw-bold mt-3">Medical Triage Advisory Notice</h6>
+                    <p class="small text-secondary">SwasthAI provides automated medical triage prioritization based on clinical inputs. Triage scores serve as an advisory sorting tool for clinic queue management and do not constitute a final diagnosis or replace professional medical care.</p>
+                    <h6 class="fw-bold mt-3">Emergency Disclaimer</h6>
+                    <p class="small text-secondary">If you are experiencing a life-threatening medical emergency, please contact local emergency medical services or go to the nearest hospital emergency room immediately.</p>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold text-dark" id="contactModalLabel">
+                        <i class="bi bi-envelope text-primary me-2"></i>Contact Us
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-3 bg-primary bg-opacity-10 text-primary rounded-circle me-3">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold">LinkedIn Page</div>
+                            <a href="https://linkedin.com/company/swasthai-ai" target="_blank" rel="noopener" class="text-decoration-none">
+                                linkedin.com/company/swasthai-ai <i class="bi bi-box-arrow-up-right small ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-3 bg-success bg-opacity-10 text-success rounded-circle me-3">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold">Email Support</div>
+                            <span class="text-secondary">contact@swasthai.ai</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="p-3 bg-info bg-opacity-10 text-info rounded-circle me-3">
+                            <i class="bi bi-geo-alt-fill fs-4"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold">Location</div>
+                            <span class="text-secondary">Healthcare Innovation Hub, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/translations.js') }}"></script>
     <script>
