@@ -8,7 +8,7 @@ from io import BytesIO
 import base64
 
 
-def generate_clinic_qr(clinic_slug: str, base_url: str = "https://swasthai.roadto405.xyz") -> str:
+def generate_clinic_qr(clinic_slug: str, base_url: str = "https://swasthai-2tv5.onrender.com") -> str:
     """
     Generate a QR code for a clinic's registration page.
     
@@ -46,7 +46,7 @@ def generate_clinic_qr(clinic_slug: str, base_url: str = "https://swasthai.roadt
     return f"data:image/png;base64,{img_base64}"
 
 
-def generate_clinic_qr_file(clinic_slug: str, output_path: str, base_url: str = "https://swasthai.roadto405.xyz"):
+def generate_clinic_qr_file(clinic_slug: str, output_path: str, base_url: str = "https://swasthai-2tv5.onrender.com"):
     """
     Generate a QR code and save it to a file.
     
@@ -76,7 +76,7 @@ def generate_clinic_qr_file(clinic_slug: str, output_path: str, base_url: str = 
     print(f"URL: {registration_url}")
 
 
-def get_clinic_url(clinic_slug: str, base_url: str = "https://swasthai.roadto405.xyz") -> str:
+def get_clinic_url(clinic_slug: str, base_url: str = "https://swasthai-2tv5.onrender.com") -> str:
     """
     Get the full registration URL for a clinic.
     
@@ -96,11 +96,11 @@ if __name__ == "__main__":
     
     if len(sys.argv) < 2:
         print("Usage: python qr_generator.py <clinic_slug> [output_file] [base_url]")
-        print("Example: python qr_generator.py sample-clinic sample-clinic-qr.png https://swasthai.roadto405.xyz")
+        print("Example: python qr_generator.py sample-clinic sample-clinic-qr.png https://swasthai-2tv5.onrender.com")
         sys.exit(1)
     
     clinic_slug = sys.argv[1]
     output_file = sys.argv[2] if len(sys.argv) > 2 else f"{clinic_slug}-qr.png"
-    base_url = sys.argv[3] if len(sys.argv) > 3 else "https://swasthai.roadto405.xyz"
+    base_url = sys.argv[3] if len(sys.argv) > 3 else "https://swasthai-2tv5.onrender.com"
     
     generate_clinic_qr_file(clinic_slug, output_file, base_url)

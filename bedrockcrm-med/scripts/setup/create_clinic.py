@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 
 import os
 app = create_app('production' if os.environ.get('FLASK_ENV') == 'production' else 'development')
-APP_BASE_URL = os.environ.get('APP_BASE_URL', 'https://swasthai.roadto405.xyz').rstrip('/')
+APP_BASE_URL = os.environ.get('APP_BASE_URL', 'https://swasthai-2tv5.onrender.com').rstrip('/')
 
 with app.app_context():
     # Create Sample Clinic

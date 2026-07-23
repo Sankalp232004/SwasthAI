@@ -27,7 +27,7 @@ class Config:
     PERMANENT_SESSION_LIFETIME = timedelta(hours=8)
 
     # Public base URL used when no explicit system setting is stored yet.
-    APP_BASE_URL = os.environ.get('APP_BASE_URL', 'https://swasthai.roadto405.xyz').rstrip('/')
+    APP_BASE_URL = os.environ.get('APP_BASE_URL', 'https://swasthai-2tv5.onrender.com').rstrip('/')
     
     # Triage Engine Version (for audit trail)
     TRIAGE_ENGINE_VERSION = "1.0.0"

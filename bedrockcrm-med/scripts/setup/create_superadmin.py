@@ -11,7 +11,7 @@ from werkzeug.security import generate_password_hash
 import os
 app = create_app('production' if os.environ.get('FLASK_ENV') == 'production' else 'development')
 
-APP_BASE_URL = os.environ.get('APP_BASE_URL', 'https://swasthai.roadto405.xyz').rstrip('/')
+APP_BASE_URL = os.environ.get('APP_BASE_URL', 'https://swasthai-2tv5.onrender.com').rstrip('/')
 
 ADMIN_EMAIL    = 'swasthai.admin@system.com'
 ADMIN_PASSWORD = 'Sw@sth1#2026'

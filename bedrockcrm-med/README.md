@@ -287,7 +287,7 @@ docker-compose up -d
 
 ### **Production - Railway.app**
 
-**Live URL:** https://swasthai.roadto405.xyz/
+**Live URL:** https://swasthai-2tv5.onrender.com/
 
 **Deployment Config:** `railway.toml`
 ```yaml
@@ -391,7 +391,7 @@ gunicorn --worker-class sync \
 
 ```bash
 # Health check (available on live system)
-curl https://swasthai.roadto405.xyz/health
+curl https://swasthai-2tv5.onrender.com/health
 
 # Manual testing checklist:
 # 1. Patient registration → 2-minute walk-in form
@@ -434,15 +434,15 @@ curl https://swasthai.roadto405.xyz/health
 
 ### **Access the Live System**
 
-**Production URL:** https://swasthai.roadto405.xyz/
+**Production URL:** https://swasthai-2tv5.onrender.com/
 
 ### **Quick Links**
 
 | Role | URL | Credentials |
 |------|-----|-------------|
-| **Patient** | https://swasthai.roadto405.xyz/c/sample-clinic | Public - No login |
-| **Doctor** | https://swasthai.roadto405.xyz/doctor/login | admin@clinic.com / (set via init) |
-| **Admin** | https://swasthai.roadto405.xyz/superadmin/login | swasthai.admin@system.com / Sw@sth1#2026 |
+| **Patient** | https://swasthai-2tv5.onrender.com/c/sample-clinic | Public - No login |
+| **Doctor** | https://swasthai-2tv5.onrender.com/doctor/login | admin@clinic.com / (set via init) |
+| **Admin** | https://swasthai-2tv5.onrender.com/superadmin/login | swasthai.admin@system.com / Sw@sth1#2026 |
 
 ### **Demo Flow**
 
@@ -546,7 +546,7 @@ curl -X GET http://localhost:5010/stream/queue/sample-clinic
 
 **Health Check:**
 ```bash
-curl https://swasthai.roadto405.xyz/health
+curl https://swasthai-2tv5.onrender.com/health
 ```
 
 **View Logs:**

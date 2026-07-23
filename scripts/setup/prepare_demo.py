@@ -223,7 +223,7 @@ def upsert_appointment(
 
 
 def main() -> None:
-    base_url = os.environ.get("DEMO_BASE_URL", "https://swasthai.roadto405.xyz").rstrip("/")
+    base_url = os.environ.get("DEMO_BASE_URL", "https://swasthai-2tv5.onrender.com").rstrip("/")
 
     with app.app_context():
         admin = upsert_superadmin()
