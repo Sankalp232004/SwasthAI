@@ -40,6 +40,24 @@ def create_app(config_name='default'):
     def health():
         return jsonify({'status': 'ok'}), 200
 
+    # Custom Error Handlers (404 & 500 Pages)
+    from flask import render_template
+
+    @app.errorhandler(404)
+    def not_found_error(error):
+        return render_template('error.html', 
+                               status_code=404,
+                               message='Page Not Found',
+                               details='The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.'), 404
+
+    @app.errorhandler(500)
+    def internal_error(error):
+        db.session.rollback()
+        return render_template('error.html',
+                               status_code=500,
+                               message='Internal Server Error',
+                               details='We apologize for the inconvenience. An unexpected error occurred on our server. Please try refreshing or return home.'), 500
+
     # Tables are managed by Flask-Migrate (flask db upgrade)
     # Do not use db.create_all() as it conflicts with migrations
     

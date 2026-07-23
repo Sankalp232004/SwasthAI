@@ -7,8 +7,9 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('superadmin.dashboard') }}">
-            <i class="bi bi-shield-check-fill me-2"></i>SwasthAI Superadmin
+        <a class="navbar-brand d-flex align-items-center" href="{{ url_for('superadmin.dashboard') }}">
+            <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI" height="32" class="d-inline-block me-2">
+            <span class="badge bg-secondary ms-2">Superadmin</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>

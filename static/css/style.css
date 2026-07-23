@@ -1,13 +1,62 @@
 /* SwasthAI - Medical Triage System Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
     color-scheme: light;
+
+    /* Primary Brand Palette */
+    --primary: #0F2C59;         /* SwasthAI Navy */
+    --primary-light: #1E40AF;   /* Light Navy */
+    --primary-dark: #0A1E3F;    /* Deep Dark Navy */
+    --secondary: #008080;       /* SwasthAI Teal */
+    --secondary-light: #0D9488; /* Vibrant Teal */
+    --accent: #E74C3C;          /* SwasthAI Coral/Red */
+    --accent-hover: #C0392B;
+
+    /* Base Layout Colors */
+    --bg-light: #F8FAFC;        /* Cool off-white background */
+    --bg-dark: #0F172A;         /* Dark mode hero background */
+    --surface: #FFFFFF;         /* Card & modal background */
+    
+    /* Text Color Scale */
+    --text-main: #1E293B;       /* High-contrast body text */
+    --text-secondary: #475569;  /* Muted text */
+    --text-muted: #94A3B8;      /* Disabled/subtle text */
+    --text-inverse: #FFFFFF;    /* White text on dark bg */
+    --border-color: #E2E8F0;    /* Border gray */
+    
+    /* Functional UI States */
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --info: #3B82F6;
+
+    /* Medical Triage Priority Tokens */
     --emergency: #8B0000;
     --red: #E74C3C;
-    --amber: #F39C12;
-    --green: #27AE60;
-    --primary: #2C3E50;
-    --bg-light: #F8F9FA;
+    --amber: #F59E0B;
+    --green: #10B981;
+
+    /* Typography System */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Spacing Scale */
+    --space-xs: 0.25rem; /* 4px */
+    --space-sm: 0.5rem;  /* 8px */
+    --space-md: 1rem;    /* 16px */
+    --space-lg: 1.5rem;  /* 24px */
+    --space-xl: 2.5rem;  /* 40px */
+    
+    /* Component Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-pill: 50px;
+
+    /* Shadow Tokens */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
 
 /* Landing Page */
@@ -1557,3 +1606,181 @@ label, .form-label {
 .text-on-gradient {
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
+
+/* Global Footer Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.app-footer {
+    background: transparent;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.landing-page .app-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.app-footer p {
+    color: #6c757d;
+}
+
+.landing-page .app-footer p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.footer-link {
+    color: #495057;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-link:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.landing-page .footer-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.landing-page .footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-sep {
+    color: #adb5bd;
+}
+
+.landing-page .footer-sep {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* SwasthAI Standardized Design System Overrides */
+
+/* Typography */
+body, button, input, select, textarea {
+    font-family: var(--font-family);
+}
+
+/* Button Component Standards */
+.btn {
+    font-family: var(--font-family);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 0.55rem 1.25rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: var(--secondary-light);
+    border-color: var(--secondary-light);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn-danger {
+    background-color: var(--error);
+    border-color: var(--error);
+    color: #ffffff;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+}
+
+/* Loading Overlay Component */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.loading-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 3.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Error Page Brand Styling */
+.error-card {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.brand-hero-logo {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.brand-hero-logo:hover {
+    transform: scale(1.03);
+}
+
+/* Navbar Brand Improvements */
+.navbar-brand img {
+    max-height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+

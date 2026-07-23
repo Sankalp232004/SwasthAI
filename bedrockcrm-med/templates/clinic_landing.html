@@ -23,9 +23,9 @@
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-10 col-xl-8 mx-auto text-center">
-                    <div class="logo-container mb-4">
-                        <i class="bi bi-hospital-fill logo-icon"></i>
-                        <h1 class="logo-text">{{ clinic.name }}</h1>
+                    <div class="logo-container mb-4 text-center">
+                        <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI Logo" class="brand-hero-logo mb-2" style="max-height: 55px; width: auto;"><br>
+                        <h1 class="logo-text d-inline-block">{{ clinic.name }}</h1>
                     </div>
                     <p class="lead mb-5 fw-semibold" style="color: rgba(255,255,255,0.95);" data-i18n="app.tagline">
                         Quick and Smart Medical Triage

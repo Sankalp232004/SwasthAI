@@ -7,8 +7,8 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('doctor.dashboard') }}">
-            <i class="bi bi-heart-pulse-fill me-2"></i><span data-i18n="app.name">SwasthAI</span>
+        <a class="navbar-brand d-flex align-items-center" href="{{ url_for('doctor.dashboard') }}">
+            <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI" height="32" class="d-inline-block me-2">
             <span class="badge bg-primary ms-2 d-none d-md-inline" data-i18n="doctor.portal">Doctor Portal</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

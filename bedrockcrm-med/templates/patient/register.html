@@ -7,8 +7,8 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="{% if clinic %}{{ url_for('patient.clinic_landing', slug=clinic.slug) }}{% else %}{{ url_for('patient.index') }}{% endif %}">
-            <i class="bi bi-heart-pulse-fill me-2"></i><span data-i18n="app.name">SwasthAI</span>
+        <a class="navbar-brand d-flex align-items-center" href="{% if clinic %}{{ url_for('patient.clinic_landing', slug=clinic.slug) }}{% else %}{{ url_for('patient.index') }}{% endif %}">
+            <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI" height="32" class="d-inline-block me-2">
             {% if clinic %}
             <span class="ms-2">| {{ clinic.name }}</span>
             {% endif %}

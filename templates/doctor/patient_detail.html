@@ -7,8 +7,8 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('doctor.dashboard') }}">
-            <i class="bi bi-heart-pulse-fill me-2"></i>SwasthAI
+        <a class="navbar-brand d-flex align-items-center" href="{{ url_for('doctor.dashboard') }}">
+            <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI" height="32" class="d-inline-block me-2">
         </a>
         <div class="navbar-nav ms-auto">
             <a class="btn btn-outline-light btn-sm" href="{{ url_for('doctor.dashboard') }}">

@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}SwasthAI{% endblock %} - Medical Triage System</title>
+    <!-- Favicon & Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+    
+    <!-- Open Graph & Social Media Tags -->
+    <meta property="og:title" content="SwasthAI - Intelligent Medical Triage System">
+    <meta property="og:description" content="Fast, Fair, and Accurate Patient Prioritization & Queue Management">
+    <meta property="og:image" content="{{ url_for('static', filename='img/og-image.png', _external=True) }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SwasthAI - Intelligent Medical Triage System">
+    <meta name="twitter:description" content="Fast, Fair, and Accurate Patient Prioritization & Queue Management">
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/og-image.png', _external=True) }}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
@@ -68,7 +84,10 @@
     <!-- Footer -->
     <footer class="app-footer text-center py-4">
         <div class="container">
-            <p class="mb-2 small">&copy; 2026 Swasthai</p>
+            <div class="mb-2">
+                <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI Logo" class="brand-footer-logo mb-1" style="max-height: 36px; width: auto;">
+            </div>
+            <p class="mb-2 small">&copy; 2026 SwasthAI &bull; Intelligent Medical Triage System</p>
             <div class="footer-links d-flex justify-content-center align-items-center gap-2 flex-wrap small">
                 <a href="https://linkedin.com/company/swasthai-ai" target="_blank" rel="noopener" class="footer-link">
                     <i class="bi bi-linkedin text-primary me-1"></i>LinkedIn
@@ -82,6 +101,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Loading Screen Overlay (Reusable Component) -->
+    <div id="appLoadingOverlay" class="loading-overlay d-none">
+        <div class="loading-content text-center">
+            <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="SwasthAI" class="mb-3" style="max-height: 50px; width: auto;">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                <div class="spinner-border spinner-border-sm text-light" role="status"></div>
+                <span class="fw-semibold text-white">Loading SwasthAI...</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Privacy Policy Modal -->
     <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
