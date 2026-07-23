@@ -23,7 +23,7 @@ Swasthai helps clinics prioritize patients based on structured intake informatio
 
 ## Live Demo
 
-[https://your-website.com](https://swasthai-2tv5.onrender.com/)
+(https://swasthai-2tv5.onrender.com/)
 
 ## License
 
