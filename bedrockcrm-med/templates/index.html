@@ -161,15 +161,21 @@
                             
                             <hr class="my-4">
                             
-                            <!-- Provider Logins -->
-                            <p class="small fw-medium mb-3 text-muted-light" data-i18n="welcome.provider">
-                                Are you a healthcare provider?
+                            <!-- Provider Logins & WhatsApp Demo Booking -->
+                            <p class="small fw-medium mb-3 text-muted-light">
+                                Are you a healthcare provider or clinic owner?
                             </p>
-                            <div class="d-flex gap-3 justify-content-center flex-wrap">
-                                <a href="{{ url_for('doctor.login') }}" class="btn btn-outline-primary">
+                            <div class="d-flex gap-3 justify-content-center flex-wrap align-items-center">
+                                <a href="https://wa.me/919140721395?text=Hi!%20I'm%20interested%20in%20SwasthAI%20for%20my%20clinic.%20I'd%20like%20to%20schedule%20a%20demo."
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn btn-whatsapp-hero py-2 px-4 shadow-sm">
+                                    <i class="bi bi-whatsapp me-2 fs-5"></i>Book a Demo on WhatsApp
+                                </a>
+                                <a href="{{ url_for('doctor.login') }}" class="btn btn-outline-primary py-2 px-3">
                                     <i class="bi bi-shield-lock me-2"></i><span data-i18n="login.doctor">Doctor Login</span>
                                 </a>
-                                <a href="{{ url_for('superadmin.login') }}" class="btn btn-outline-secondary">
+                                <a href="{{ url_for('superadmin.login') }}" class="btn btn-outline-secondary py-2 px-3">
                                     <i class="bi bi-gear-fill me-2"></i><span data-i18n="login.admin">Admin Login</span>
                                 </a>
                             </div>

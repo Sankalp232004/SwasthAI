@@ -27,7 +27,7 @@
         .lang-toggle {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 20px;
             z-index: 1050;
             background: rgba(255,255,255,0.95);
             border: 2px solid var(--primary);
@@ -173,6 +173,17 @@
                 </div>
                 <div class="modal-body text-dark">
                     <div class="d-flex align-items-center mb-3">
+                        <div class="p-3 bg-success bg-opacity-10 text-success rounded-circle me-3">
+                            <i class="bi bi-whatsapp fs-4"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold">WhatsApp Demo & Support</div>
+                            <a href="https://wa.me/919140721395?text=Hi!%20I'm%20interested%20in%20SwasthAI%20for%20my%20clinic.%20I'd%20like%20to%20schedule%20a%20demo." target="_blank" rel="noopener" class="text-decoration-none text-success fw-semibold">
+                                +91 9140721395 <i class="bi bi-box-arrow-up-right small ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
                         <div class="p-3 bg-primary bg-opacity-10 text-primary rounded-circle me-3">
                             <i class="bi bi-linkedin fs-4"></i>
                         </div>
@@ -184,7 +195,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                        <div class="p-3 bg-success bg-opacity-10 text-success rounded-circle me-3">
+                        <div class="p-3 bg-secondary bg-opacity-10 text-secondary rounded-circle me-3">
                             <i class="bi bi-envelope-fill fs-4"></i>
                         </div>
                         <div>
@@ -245,6 +256,17 @@
         return d.toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
     };
     </script>
+    <!-- Floating WhatsApp Button (Every Page) -->
+    <a href="https://wa.me/919140721395?text=Hi!%20I'm%20interested%20in%20SwasthAI%20for%20my%20clinic.%20I'd%20like%20to%20schedule%20a%20demo."
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float" 
+       title="Book a Demo on WhatsApp (+91 9140721395)"
+       aria-label="Book a Demo on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+        <span class="whatsapp-float-text">Book a Demo</span>
+    </a>
+
     {% block scripts %}{% endblock %}
 </body>
 </html>
