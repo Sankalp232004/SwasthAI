@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://swasthai-2tv5.onrender.com/sitemap.xml
