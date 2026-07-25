@@ -1,7 +1,9 @@
 # SwasthAI LinkedIn Content Strategy
 ### 30 LinkedIn Posts — Credibility, Trust, Leads, Demo Requests
 **Author Voice:** Sankalp Mishra, Founder — SwasthAI  
-**Demo Video:** https://youtu.be/27o-mGdCSUQ
+**Website:** https://swasthai-three.vercel.app/  
+**Medium:** https://medium.com/@swasthai.founder  
+**YouTube Demo:** https://www.youtube.com/watch?v=27o-mGdCSUQ  
 
 ---
 
@@ -175,7 +177,7 @@ We have not added unnecessary features. We have not built a full EMR or a billin
 
 If you manage a clinic and this sounds like something worth exploring, I'd genuinely welcome a conversation.
 
-Watch the demo here: https://youtu.be/27o-mGdCSUQ
+Watch the demo here: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## CTA
 If you run a clinic, I'd love to know what questions this raises for you.
@@ -184,7 +186,7 @@ If you run a clinic, I'd love to know what questions this raises for you.
 Thumbnail screenshot of the demo video showing the queue management screen, with a "Watch Demo" overlay button.
 
 ## Suggested Video
-Embed the demo directly: https://youtu.be/27o-mGdCSUQ
+Embed the demo directly: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## Hashtags
 `#SwasthAI` `#ClinicManagement` `#OPD` `#HealthTech` `#DigitalHealth` `#PatientExperience` `#ClinicWorkflow`
@@ -601,13 +603,13 @@ We made adoption easy on purpose. A pilot clinic can be onboarded and operationa
 If it does not add value in the first week, we want to know that — not have it hidden because the clinic feels too invested to give honest feedback.
 
 ## CTA
-Watch the 5-minute demo to see what this looks like in practice: https://youtu.be/27o-mGdCSUQ
+Watch the 5-minute demo to see what this looks like in practice: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## Suggested Image
 Clean split screen: "Doctor's Consultation (Unchanged)" vs "What SwasthAI Adds Before You Walk In" — brief visual list of intake, score, queue.
 
 ## Suggested Video
-Embed the demo: https://youtu.be/27o-mGdCSUQ
+Embed the demo: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## Hashtags
 `#SwasthAI` `#ClinicManagement` `#OPD` `#HealthTech` `#DigitalHealth` `#PatientExperience` `#ClinicWorkflow`
@@ -1171,7 +1173,7 @@ Nothing in this dashboard requires a data scientist to interpret. It is meant to
 Simple data, consistently collected, becomes genuinely useful over time.
 
 ## CTA
-Watch the full demo to see this in context: https://youtu.be/27o-mGdCSUQ
+Watch the full demo to see this in context: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## Suggested Image
 Clean UI screenshot of the end-of-day dashboard — all five metrics visible, warm but professional color palette, clearly readable. Actual product UI.
@@ -1186,7 +1188,7 @@ Clean UI screenshot of the end-of-day dashboard — all five metrics visible, wa
 7. How to Use This in 5 Minutes
 
 ## Suggested Video
-Embed: https://youtu.be/27o-mGdCSUQ
+Embed: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## Hashtags
 `#SwasthAI` `#ClinicManagement` `#HealthcareOperations` `#OPD` `#HealthTech` `#DigitalHealth` `#ClinicWorkflow`
@@ -1260,7 +1262,7 @@ Here is what getting started looks like, practically:
 
 We are not asking for a large commitment. We are asking for one week and honest feedback.
 
-If you run a clinic and this sounds worth exploring, reach out directly or book a demo: https://youtu.be/27o-mGdCSUQ
+If you run a clinic and this sounds worth exploring, reach out directly or book a demo: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## CTA
 If you know a clinic owner who might benefit from this, I'd appreciate you sharing this post.
@@ -1278,7 +1280,7 @@ Step-by-step graphic: "Getting Started with SwasthAI in 5 Steps." Clean numbered
 7. Book Your Demo (CTA with link)
 
 ## Suggested Video
-Embed: https://youtu.be/27o-mGdCSUQ
+Embed: https://www.youtube.com/watch?v=27o-mGdCSUQ
 
 ## Hashtags
 `#SwasthAI` `#ClinicManagement` `#OPD` `#HealthTech` `#DigitalHealth` `#ClinicWorkflow` `#DemoRequest`
@@ -1413,5 +1415,7 @@ Spend 15 minutes engaging with others' content before publishing your own. Comme
 ---
 
 *Prepared for: Sankalp Mishra, Founder — SwasthAI*  
-*Demo Video: https://youtu.be/27o-mGdCSUQ*  
-*LinkedIn: https://linkedin.com/company/swasthai-ai*
+*Website: https://swasthai-three.vercel.app/*  
+*Medium: https://medium.com/@swasthai.founder*  
+*YouTube Demo: https://www.youtube.com/watch?v=27o-mGdCSUQ*  
+
