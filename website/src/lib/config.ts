@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   url: "https://swasthai-2tv5.onrender.com",
   demoVideoUrl: "https://youtu.be/27o-mGdCSUQ",
   demoVideoEmbedUrl: "https://www.youtube.com/embed/27o-mGdCSUQ?autoplay=0&rel=0",
-  whatsappNumber: "+91 9140721395",
+  whatsappNumberText: "WhatsApp Support & Demo",
   whatsappRaw: "919140721395",
   whatsappMessages: {
     doctorDemo: "Hi! I'm interested in SwasthAI for my clinic. I'd like to schedule a demo.",
@@ -15,9 +15,10 @@ export const SITE_CONFIG = {
   },
   email: "swasthai.founder@gmail.com",
   linkedin: "https://linkedin.com/company/swasthai-ai",
+  medium: "https://medium.com/@swasthai.founder",
   location: "Lucknow, Uttar Pradesh, IN",
   founder: {
-    name: "Sankalp Mishra",
+    name: "Founder",
     role: "Founder & CEO, SwasthAI",
     bio: "Building intelligent, accessible workflow technology for healthcare providers across India."
   },
@@ -36,6 +37,7 @@ export interface BlogPost {
   readTime: string;
   publishedAt: string;
   author: string;
+  mediumUrl?: string;
   content: string;
 }
 
@@ -47,7 +49,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Clinic Workflow",
     readTime: "4 min read",
     publishedAt: "July 24, 2026",
-    author: "Sankalp Mishra",
+    author: "Founder",
+    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       In a typical outpatient clinic, the most chaotic minutes occur before the patient ever enters the consultation room. 
       Patients arrive in waves, registration registers fill up, and receptionists make high-pressure decisions based solely on arrival sequence or visual impression.
@@ -70,7 +73,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Digital Health",
     readTime: "5 min read",
     publishedAt: "July 20, 2026",
-    author: "Sankalp Mishra",
+    author: "Founder",
+    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       When building software for Indian healthcare providers, developers often make the mistake of assuming continuous cloud connectivity. In real-world clinics across Lucknow, Kanpur, and Varanasi, power outages and 4G fluctuations are daily occurrences.
 
@@ -89,7 +93,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Patient Experience",
     readTime: "4 min read",
     publishedAt: "July 15, 2026",
-    author: "Sankalp Mishra",
+    author: "Founder",
+    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       Studies in ambulatory care consistently show that patient dissatisfaction rarely stems from medical treatment quality. Instead, the primary cause of patient attrition is unmanaged waiting room anxiety.
 
@@ -108,7 +113,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Startup",
     readTime: "6 min read",
     publishedAt: "July 10, 2026",
-    author: "Sankalp Mishra",
+    author: "Founder",
+    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       When I started SwasthAI, I assumed the core challenge was Electronic Health Records (EHR). But after spending weeks observing daily OPD operations, I realized the real problem occurred before the doctor's door opened.
 
@@ -127,7 +133,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Healthcare",
     readTime: "5 min read",
     publishedAt: "July 5, 2026",
-    author: "Sankalp Mishra",
+    author: "Founder",
+    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       Not all OPD queues are created equal. A pediatric clinic operates on different urgency signals than an orthopedic practice.
 

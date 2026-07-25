@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import Workflow from "@/components/Workflow";
+import InteractiveTriageSimulator from "@/components/InteractiveTriageSimulator";
+import InteractiveRoiCalculator from "@/components/InteractiveRoiCalculator";
 import ScreenshotsSection from "@/components/ScreenshotsSection";
 import DemoVideoSection from "@/components/DemoVideoSection";
 import FeaturesGrid from "@/components/FeaturesGrid";
@@ -16,6 +18,8 @@ export default function HomePage() {
       <Hero />
       <ProblemSolution />
       <Workflow />
+      <InteractiveTriageSimulator />
+      <InteractiveRoiCalculator />
       <ScreenshotsSection />
       <DemoVideoSection />
       <FeaturesGrid />

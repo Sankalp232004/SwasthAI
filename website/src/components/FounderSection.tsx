@@ -22,7 +22,7 @@ export default function FounderSection() {
               <div className="relative inline-block">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-teal-500/20 border-2 border-teal-400/40 p-1 shadow-xl mx-auto lg:mx-0 flex items-center justify-center">
                   <div className="w-full h-full rounded-2xl bg-[#07162C] flex items-center justify-center text-white font-extrabold text-3xl sm:text-4xl tracking-wider">
-                    SM
+                    S
                   </div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 bg-[#25D366] text-white p-2 rounded-xl shadow-lg">
@@ -31,7 +31,7 @@ export default function FounderSection() {
               </div>
 
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Sankalp Mishra</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Founder</h3>
                 <span className="block text-xs sm:text-sm text-teal-300 font-medium">Founder & CEO, SwasthAI</span>
                 <span className="block text-xs text-gray-400">Lucknow, Uttar Pradesh, India</span>
               </div>
@@ -76,7 +76,7 @@ export default function FounderSection() {
                   className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1DA851] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all"
                 >
                   <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>Speak Directly with Sankalp on WhatsApp</span>
+                  <span>Speak Directly with Founder on WhatsApp</span>
                 </a>
 
                 <Link

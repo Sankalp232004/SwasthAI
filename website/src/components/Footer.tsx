@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageSquare, Mail, MapPin, ExternalLink, ShieldCheck } from "lucide-react";
+import { MessageSquare, Mail, MapPin, ExternalLink, ShieldCheck, BookOpen } from "lucide-react";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
 import { SITE_CONFIG } from "@/lib/config";
 
@@ -58,6 +58,17 @@ export default function Footer() {
               </a>
 
               <a
+                href={SITE_CONFIG.medium}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-emerald-500/20 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center transition-colors"
+                title="SwasthAI Medium Blog"
+                aria-label="Medium Blog"
+              >
+                <BookOpen className="w-4 h-4" />
+              </a>
+
+              <a
                 href={`mailto:${SITE_CONFIG.email}`}
                 className="w-9 h-9 rounded-lg bg-teal-500/20 hover:bg-teal-600 text-teal-400 hover:text-white flex items-center justify-center transition-colors"
                 title="Email Support"
@@ -86,6 +97,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us & Founder</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Case Studies</Link></li>
+              <li><a href={SITE_CONFIG.medium} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors inline-flex items-center gap-1">Medium Articles <ExternalLink className="w-3 h-3 text-gray-500" /></a></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Support</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
@@ -101,7 +113,7 @@ export default function Footer() {
                 <div>
                   <span className="block text-xs text-gray-400">WhatsApp Support & Demo:</span>
                   <a href={waLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:underline">
-                    {SITE_CONFIG.whatsappNumber}
+                    Click to Open WhatsApp
                   </a>
                 </div>
               </li>
@@ -139,6 +151,8 @@ export default function Footer() {
             <a href={waLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp Demo</a>
             <span>•</span>
             <a href={SITE_CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <span>•</span>
+            <a href={SITE_CONFIG.medium} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Medium Blog</a>
             <span>•</span>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <span>•</span>

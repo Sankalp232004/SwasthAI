@@ -51,7 +51,7 @@ export default function ContactPage() {
               <div className="space-y-3">
                 <h2 className="text-2xl font-bold text-[#0F2C59]">Direct Contact Channels</h2>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  For fastest response regarding demo booking or clinic setup, message us on WhatsApp.
+                  For fastest response regarding demo booking or clinic setup, message us directly on WhatsApp.
                 </p>
               </div>
 
@@ -62,9 +62,9 @@ export default function ContactPage() {
                     <MessageSquare className="w-5 h-5 fill-white" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-slate-900">WhatsApp Demo & Support</h3>
+                    <h3 className="text-sm font-bold text-slate-900">WhatsApp Support & Demo</h3>
                     <a href={waLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-emerald-700 hover:underline">
-                      {SITE_CONFIG.whatsappNumber}
+                      Click to Connect on WhatsApp
                     </a>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                   className="w-full bg-[#25D366] hover:bg-[#1DA851] text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all"
                 >
                   <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>Chat on WhatsApp</span>
+                  <span>Book Demo on WhatsApp</span>
                 </a>
               </div>
 
