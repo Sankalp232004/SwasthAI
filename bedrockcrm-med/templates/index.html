@@ -172,10 +172,16 @@
                                    class="btn btn-whatsapp-hero py-2 px-4 shadow-sm">
                                     <i class="bi bi-whatsapp me-2 fs-5"></i>Book a Demo on WhatsApp
                                 </a>
-                                <a href="{{ url_for('doctor.login') }}" class="btn btn-outline-primary py-2 px-3">
+                                <a href="https://swasthai-three.vercel.app/"
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn btn-outline-primary py-2 px-3">
+                                    <i class="bi bi-globe me-2"></i>Official Website
+                                </a>
+                                <a href="{{ url_for('doctor.login') }}" class="btn btn-outline-secondary py-2 px-3">
                                     <i class="bi bi-shield-lock me-2"></i><span data-i18n="login.doctor">Doctor Login</span>
                                 </a>
-                                <a href="{{ url_for('superadmin.login') }}" class="btn btn-outline-secondary py-2 px-3">
+                                <a href="{{ url_for('superadmin.login') }}" class="btn btn-outline-dark py-2 px-3">
                                     <i class="bi bi-gear-fill me-2"></i><span data-i18n="login.admin">Admin Login</span>
                                 </a>
                             </div>
