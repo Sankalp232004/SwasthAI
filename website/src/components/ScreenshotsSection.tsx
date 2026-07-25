@@ -33,7 +33,7 @@ export default function ScreenshotsSection() {
       title: "Support & Contact Integration",
       category: "Contact Modal",
       image: "/img/screenshots/contact_modal.png",
-      description: "Integrated contact modal with pre-filled WhatsApp demo booking, direct email, location, and LinkedIn verification.",
+      description: "Integrated contact modal with pre-filled WhatsApp demo booking, direct phone contact, email, location, and Medium blog updates.",
       features: ["Direct WhatsApp link with pre-filled text", "Verified support email", "Location & company links"]
     }
   ];

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MessageSquare, Play, ShieldCheck, ArrowRight } from "lucide-react";
+import { MessageSquare, Activity, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
 export default function CTASection() {
@@ -34,15 +34,15 @@ export default function CTASection() {
             className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-2xl hover:shadow-emerald-500/20 transition-all transform hover:-translate-y-0.5"
           >
             <MessageSquare className="w-5 h-5 fill-white" />
-            <span>Book a Demo on WhatsApp</span>
+            <span>Book a Demo on WhatsApp ({SITE_CONFIG.whatsappNumberText})</span>
           </a>
 
           <Link
-            href="/demo"
+            href="/features"
             className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 px-7 py-4 rounded-xl font-semibold text-sm sm:text-base flex items-center justify-center gap-2 backdrop-blur-md transition-all"
           >
-            <Play className="w-4 h-4 fill-white" />
-            <span>Watch Product Video</span>
+            <Activity className="w-4 h-4 text-teal-300" />
+            <span>Explore Platform Features</span>
           </Link>
         </div>
 

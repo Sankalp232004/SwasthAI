@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 import DemoVideoSection from "@/components/DemoVideoSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import { MessageSquare, Play, ShieldCheck, CheckCircle2, Clock } from "lucide-react";
+import { MessageSquare, ShieldCheck, CheckCircle2, Phone } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Watch Demo & Book Live Walkthrough",
-  description: "Watch the SwasthAI 5-minute video demo or schedule a live personalized WhatsApp demo for your medical clinic."
+  title: "Interactive Demo & Onboarding Walkthrough",
+  description: "Schedule a personalized WhatsApp demo for your medical clinic and explore the 5-step onboarding workflow."
 };
 
 export default function DemoPage() {
@@ -35,7 +35,7 @@ export default function DemoPage() {
             See How SwasthAI Simplifies Your OPD Queue
           </h1>
           <p className="text-base sm:text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Watch our short video demonstration below, or schedule a direct WhatsApp demo with founder Sankalp Mishra.
+            Schedule a direct WhatsApp demo with our team or explore our simple 5-step clinic onboarding process.
           </p>
 
           <div className="pt-4 flex justify-center">
@@ -46,7 +46,7 @@ export default function DemoPage() {
               className="bg-[#25D366] hover:bg-[#1DA851] text-white px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base flex items-center gap-2.5 shadow-xl transition-all"
             >
               <MessageSquare className="w-5 h-5 fill-white" />
-              <span>Book a Demo on WhatsApp (+91 9140721395)</span>
+              <span>Book a Demo on WhatsApp ({SITE_CONFIG.whatsappNumberText})</span>
             </a>
           </div>
         </div>

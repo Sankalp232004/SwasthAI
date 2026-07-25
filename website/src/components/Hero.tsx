@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MessageSquare, Play, Shield, Clock, CheckCircle2, Activity, ChevronRight, Zap } from "lucide-react";
+import { MessageSquare, Shield, Clock, CheckCircle2, Activity, ChevronRight, Zap } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
 export default function Hero() {
@@ -50,11 +50,11 @@ export default function Hero() {
               </a>
 
               <Link
-                href="/demo"
+                href="/features"
                 className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3.5 rounded-xl font-semibold text-base flex items-center justify-center gap-2 backdrop-blur-md transition-all"
               >
-                <Play className="w-4 h-4 fill-white" />
-                <span>Watch 5-Min Video</span>
+                <Activity className="w-4 h-4 text-teal-300" />
+                <span>Explore Capabilities</span>
               </Link>
             </div>
 
@@ -95,7 +95,7 @@ export default function Hero() {
                 </div>
                 <div className="bg-white/10 rounded-md px-3 py-1 text-[11px] font-mono text-gray-300 flex items-center gap-1.5 truncate max-w-[200px]">
                   <Shield className="w-3 h-3 text-teal-400 shrink-0" />
-                  <span className="truncate">swasthai-2tv5.onrender.com</span>
+                  <span className="truncate">swasthai-three.vercel.app</span>
                 </div>
                 <div className="w-4" />
               </div>
@@ -123,7 +123,7 @@ export default function Hero() {
                   </div>
                 </div>
                 <Link
-                  href="/demo"
+                  href="/features"
                   className="text-xs text-teal-300 hover:text-white font-semibold flex items-center gap-0.5"
                 >
                   <span>See Live</span>

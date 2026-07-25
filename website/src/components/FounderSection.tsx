@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MessageSquare, ShieldCheck, Heart, Award, ArrowRight } from "lucide-react";
-import { LinkedInIcon } from "@/components/LinkedInIcon";
+import { MessageSquare, ShieldCheck, Heart, ArrowRight, Mail } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
 export default function FounderSection() {
@@ -38,13 +37,11 @@ export default function FounderSection() {
 
               <div className="flex items-center justify-center lg:justify-start space-x-3 pt-1">
                 <a
-                  href={SITE_CONFIG.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold text-white flex items-center gap-1.5 border border-white/15 transition-colors"
+                  href={`mailto:${SITE_CONFIG.email}`}
+                  className="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold text-white flex items-center gap-1.5 border border-white/15 transition-colors"
                 >
-                  <LinkedInIcon className="w-3.5 h-3.5 text-blue-400" />
-                  <span>Connect on LinkedIn</span>
+                  <Mail className="w-3.5 h-3.5 text-teal-300" />
+                  <span>{SITE_CONFIG.email}</span>
                 </a>
               </div>
             </div>
@@ -76,7 +73,7 @@ export default function FounderSection() {
                   className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1DA851] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all"
                 >
                   <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>Speak Directly with Founder on WhatsApp</span>
+                  <span>Speak Directly with Founder on WhatsApp ({SITE_CONFIG.whatsappNumberText})</span>
                 </a>
 
                 <Link

@@ -5,7 +5,6 @@ import Link from "next/link";
 import FounderSection from "@/components/FounderSection";
 import CTASection from "@/components/CTASection";
 import { ShieldCheck, Heart, Target, Users, MapPin, Mail, MessageSquare } from "lucide-react";
-import { LinkedInIcon } from "@/components/LinkedInIcon";
 import { SITE_CONFIG } from "@/lib/config";
 
 export const metadata: Metadata = {

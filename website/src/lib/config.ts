@@ -3,10 +3,8 @@ export const SITE_CONFIG = {
   fullName: "SwasthAI • Intelligent Medical Triage System",
   tagline: "Fast, Fair, and Accurate Patient Prioritization for Clinics",
   description: "SwasthAI is India's premier intelligent clinic workflow & patient triage platform. Eliminate long OPD waiting room chaos, prioritize urgent cases, and optimize doctor consultation time.",
-  url: "https://swasthai-2tv5.onrender.com",
-  demoVideoUrl: "https://youtu.be/27o-mGdCSUQ",
-  demoVideoEmbedUrl: "https://www.youtube.com/embed/27o-mGdCSUQ?autoplay=0&rel=0",
-  whatsappNumberText: "WhatsApp Support & Demo",
+  url: "https://swasthai-three.vercel.app",
+  whatsappNumberText: "+91 9140721395",
   whatsappRaw: "919140721395",
   whatsappMessages: {
     doctorDemo: "Hi! I'm interested in SwasthAI for my clinic. I'd like to schedule a demo.",
@@ -14,8 +12,6 @@ export const SITE_CONFIG = {
     generalContact: "Hi SwasthAI team, I have an inquiry regarding your clinic workflow software."
   },
   email: "swasthai.founder@gmail.com",
-  linkedin: "https://linkedin.com/company/swasthai-ai",
-  medium: "https://medium.com/@swasthai.founder",
   location: "Lucknow, Uttar Pradesh, IN",
   founder: {
     name: "Founder",
@@ -37,7 +33,6 @@ export interface BlogPost {
   readTime: string;
   publishedAt: string;
   author: string;
-  mediumUrl?: string;
   content: string;
 }
 
@@ -50,7 +45,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "4 min read",
     publishedAt: "July 24, 2026",
     author: "Founder",
-    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       In a typical outpatient clinic, the most chaotic minutes occur before the patient ever enters the consultation room. 
       Patients arrive in waves, registration registers fill up, and receptionists make high-pressure decisions based solely on arrival sequence or visual impression.
@@ -74,7 +68,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     publishedAt: "July 20, 2026",
     author: "Founder",
-    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       When building software for Indian healthcare providers, developers often make the mistake of assuming continuous cloud connectivity. In real-world clinics across Lucknow, Kanpur, and Varanasi, power outages and 4G fluctuations are daily occurrences.
 
@@ -94,7 +87,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "4 min read",
     publishedAt: "July 15, 2026",
     author: "Founder",
-    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       Studies in ambulatory care consistently show that patient dissatisfaction rarely stems from medical treatment quality. Instead, the primary cause of patient attrition is unmanaged waiting room anxiety.
 
@@ -114,7 +106,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     publishedAt: "July 10, 2026",
     author: "Founder",
-    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       When I started SwasthAI, I assumed the core challenge was Electronic Health Records (EHR). But after spending weeks observing daily OPD operations, I realized the real problem occurred before the doctor's door opened.
 
@@ -134,7 +125,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     publishedAt: "July 5, 2026",
     author: "Founder",
-    mediumUrl: "https://medium.com/@swasthai.founder",
     content: `
       Not all OPD queues are created equal. A pediatric clinic operates on different urgency signals than an orthopedic practice.
 

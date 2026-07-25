@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageSquare, Mail, MapPin, CheckCircle2, Send, Phone } from "lucide-react";
-import { LinkedInIcon } from "@/components/LinkedInIcon";
+import { MessageSquare, Mail, MapPin, CheckCircle2, Send, Phone, BookOpen } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
 export default function ContactPage() {
@@ -98,12 +97,24 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-3 text-slate-700">
                   <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 font-bold">
-                    <LinkedInIcon className="w-4 h-4" />
+                    <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="block text-xs text-slate-500">LinkedIn Page</span>
-                    <a href={SITE_CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#0F2C59] hover:underline">
-                      linkedin.com/company/swasthai-ai
+                    <span className="block text-xs text-slate-500">Phone Contact</span>
+                    <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-sm font-bold text-[#0F2C59] hover:underline">
+                      {SITE_CONFIG.phone}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-slate-700">
+                  <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 font-bold">
+                    <BookOpen className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="block text-xs text-slate-500">Medium Articles</span>
+                    <a href={SITE_CONFIG.medium} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#0F2C59] hover:underline">
+                      medium.com/@swasthai.founder
                     </a>
                   </div>
                 </div>
