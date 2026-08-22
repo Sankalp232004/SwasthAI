@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Error - SwasthAI{% endblock %}
+
+{% block body_class %}error-page{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-10">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center py-5 px-4">
+                    <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 4rem;"></i>
+                    <h2 class="mt-4 mb-2 fw-bold">{{ message or 'Something went wrong' }}</h2>
+                    <p class="mb-4" style="color: #666;">
+                        {{ details or 'An unexpected error occurred. Please try again or contact your administrator.' }}
+                    </p>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <button onclick="history.back()" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-1"></i>Go Back
+                        </button>
+                        <a href="/" class="btn btn-primary">
+                            <i class="bi bi-house me-1"></i>Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
