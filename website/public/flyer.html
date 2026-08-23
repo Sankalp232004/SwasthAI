@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwasthAI — See Urgent Patients First | Clinic Operations Flyer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #041310;
+      --card-bg: #07221c;
+      --card-inner: #0b2e26;
+      --card-border: #145344;
+      --emerald-glow: #10b981;
+      --emerald-bright: #34d399;
+      --cyan-bright: #38bdf8;
+      --coral-red: #ef4444;
+      --text-main: #ffffff;
+      --text-sub: #a7f3d0;
+      --text-muted: #6ee7b7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: #020c0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(6, 78, 59, 0.2) 0px, transparent 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Screen Action Buttons */
+    .action-bar {
+      margin-bottom: 24px;
+      display: flex;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-print:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+    }
+
+    .btn-web {
+      background: rgba(255, 255, 255, 0.08);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-web:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: #38bdf8;
+    }
+
+    /* Master Flyer Canvas (A4 Aspect Ratio Optimized) */
+    .flyer {
+      width: 100%;
+      max-width: 600px;
+      background: var(--card-bg);
+      border: 1.5px solid rgba(52, 211, 153, 0.35);
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 
+        0 25px 60px -15px rgba(0, 0, 0, 0.7),
+        0 0 40px -10px rgba(16, 185, 129, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    /* Ambient Glowing Edge */
+    .flyer::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(52, 211, 153, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .flyer::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Top Brand Bar */
+    .top-bar {
+      background: linear-gradient(90deg, #064e3b 0%, #065f46 50%, #0284c7 100%);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: #ffffff;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ef4444;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+
+    .brand-name span {
+      color: #38bdf8;
+    }
+
+    .top-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #a7f3d0;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(167, 243, 208, 0.3);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 36px 32px 28px;
+      position: relative;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--emerald-bright);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    .hero-headline {
+      font-family: 'Outfit', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .hero-headline .gradient-accent {
+      background: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: #d1fae5;
+      line-height: 1.55;
+      max-width: 500px;
+    }
+
+    .hero-sub strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(52, 211, 153, 0.3) 50%, transparent 100%);
+      margin: 0 32px;
+    }
+
+    /* 4-Step Intake Workflow */
+    .section-block {
+      padding: 26px 32px;
+    }
+
+    .section-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #34d399;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-tag::after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background: rgba(52, 211, 153, 0.2);
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .step-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card-inner);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 12px 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .step-card:hover {
+      border-color: rgba(52, 211, 153, 0.5);
+      background: #0e382f;
+    }
+
+    .step-badge {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #10b981, #047857);
+      color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+
+    .step-card:last-child .step-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    }
+
+    .step-info h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .step-info p {
+      font-size: 12px;
+      color: #a7f3d0;
+      line-height: 1.35;
+    }
+
+    /* Priority Triage Color Badges */
+    .priority-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .priority-pill {
+      border-radius: 10px;
+      padding: 10px 6px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .pill-icon {
+      font-size: 15px;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .pill-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .pill-sub {
+      font-size: 9px;
+      opacity: 0.85;
+      font-weight: 500;
+    }
+
+    .pill-emergency { background: rgba(239, 68, 68, 0.15); border: 1.5px solid #ef4444; color: #fca5a5; }
+    .pill-urgent { background: rgba(249, 115, 22, 0.15); border: 1.5px solid #f97316; color: #fdba74; }
+    .pill-moderate { background: rgba(234, 179, 8, 0.15); border: 1.5px solid #eab308; color: #fde047; }
+    .pill-routine { background: rgba(16, 185, 129, 0.15); border: 1.5px solid #10b981; color: #86efac; }
+
+    /* Live App QR Scanner Card */
+    .scanner-box {
+      background: linear-gradient(135deg, rgba(7, 34, 28, 0.9), rgba(11, 46, 38, 0.95));
+      border: 2px solid rgba(56, 189, 248, 0.4);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0 32px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(56, 189, 248, 0.08);
+      position: relative;
+    }
+
+    .qr-container {
+      width: 110px;
+      height: 110px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      flex-shrink: 0;
+    }
+
+    .qr-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .scanner-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .scanner-text h3 span {
+      color: #38bdf8;
+    }
+
+    .scanner-text p {
+      font-size: 12px;
+      color: #a7f3d0;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .live-app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #7dd3fc;
+    }
+
+    /* Commercial Offer Banner */
+    .guarantee-bar {
+      background: #020c0a;
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      border-radius: 14px;
+      margin: 0 32px 24px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+
+    .guarantee-item {
+      flex: 1;
+    }
+
+    .guarantee-item:not(:last-child) {
+      border-right: 1px solid rgba(52, 211, 153, 0.2);
+    }
+
+    .guarantee-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: #34d399;
+    }
+
+    .guarantee-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #a7f3d0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Bottom Contact Bar */
+    .bottom-bar {
+      background: rgba(4, 19, 16, 0.95);
+      border-top: 1px solid rgba(52, 211, 153, 0.25);
+      padding: 22px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-url {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #38bdf8;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-url:hover {
+      text-decoration: underline;
+    }
+
+    .contact-phone {
+      font-size: 13px;
+      font-weight: 600;
+      color: #d1fae5;
+    }
+
+    .whatsapp-cta {
+      background: #25d366;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .whatsapp-cta:hover {
+      background: #1eb956;
+      transform: scale(1.02);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .action-bar {
+        display: none;
+      }
+      .flyer {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Action Controls -->
+  <div class="action-bar">
+    <button class="btn btn-print" onclick="window.print()">
+      <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+      Print / Save as PDF
+    </button>
+    <a href="https://swasthai-three.vercel.app/" class="btn btn-web" target="_blank">
+      Open Website (Vercel)
+    </a>
+  </div>
+
+  <!-- Master High-Impact Flyer -->
+  <div class="flyer">
+    
+    <!-- Top Brand Bar -->
+    <div class="top-bar">
+      <div class="brand-group">
+        <div class="brand-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="brand-name">Swasth<span>AI</span></div>
+      </div>
+      <div class="top-badge">Smart Triage · Better Care</div>
+    </div>
+
+    <!-- Hero Header -->
+    <div class="hero">
+      <div class="hero-pill">
+        <span class="pulse-dot"></span>
+        AI-Powered OPD Queue Platform
+      </div>
+      <h1 class="hero-headline">
+        See urgent<br>patients <span class="gradient-accent">first.</span>
+      </h1>
+      <p class="hero-sub">
+        Automates front-desk triage and assigns recommended clinical urgency before the doctor opens the consultation room. <strong>Zero app downloads. Doctor remains in 100% control.</strong>
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- How It Works Section -->
+    <div class="section-block">
+      <div class="section-tag">How SwasthAI Works</div>
+      <div class="steps-list">
+        <div class="step-card">
+          <div class="step-badge">01</div>
+          <div class="step-info">
+            <h4>Patient Scans Reception QR</h4>
+            <p>Arriving patients open camera and scan desk QR. Takes under 60 seconds.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">02</div>
+          <div class="step-info">
+            <h4>Structured Clinical Intake</h4>
+            <p>Captures chief complaint, duration, and red-flag symptoms in plain language.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">03</div>
+          <div class="step-info">
+            <h4>AI Recommends Priority Score</h4>
+            <p>Instantly calculates urgency classification based on clinical parameters.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">04</div>
+          <div class="step-info">
+            <h4>Doctor Priority Console (100% Control)</h4>
+            <p>Doctor reviews live queue with pre-consult summaries and can reorder anytime.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Priority Level Badges -->
+      <div class="priority-row">
+        <div class="priority-pill pill-emergency">
+          <span class="pill-icon">🚨</span>
+          <div class="pill-title">Emergency</div>
+          <div class="pill-sub">Immediate</div>
+        </div>
+        <div class="priority-pill pill-urgent">
+          <span class="pill-icon">🔴</span>
+          <div class="pill-title">Urgent</div>
+          <div class="pill-sub">Priority 1</div>
+        </div>
+        <div class="priority-pill pill-moderate">
+          <span class="pill-icon">🟡</span>
+          <div class="pill-title">Moderate</div>
+          <div class="pill-sub">Priority 2</div>
+        </div>
+        <div class="priority-pill pill-routine">
+          <span class="pill-icon">🟢</span>
+          <div class="pill-title">Routine</div>
+          <div class="pill-sub">Priority 3</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Render App QR Scanner Card -->
+    <div class="scanner-box">
+      <div class="qr-container">
+        <!-- Verified QR Code pointing to https://swasthai-2tv5.onrender.com/ -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fswasthai-2tv5.onrender.com%2F&margin=8&color=041310" alt="Scan to Test SwasthAI App">
+      </div>
+      <div class="scanner-text">
+        <h3>Scan to Test <span>Live App</span></h3>
+        <p>Experience patient intake & doctor triage console on your smartphone right now.</p>
+        <div class="live-app-badge">
+          ⚡ Interactive Live Demo
+        </div>
+      </div>
+    </div>
+
+    <!-- Commercial Guarantee -->
+    <div class="guarantee-bar">
+      <div class="guarantee-item">
+        <div class="guarantee-num">FREE</div>
+        <div class="guarantee-label">2-Day Clinic Pilot</div>
+      </div>
+      <div class="guarantee-item">
+        <div class="guarantee-num">₹0</div>
+        <div class="guarantee-label">Setup Fee</div>
+      </div>
+      <div class="guarantee-item">
+        <div class="guarantee-num">0</div>
+        <div class="guarantee-label">Hardware Needed</div>
+      </div>
+    </div>
+
+    <!-- Bottom Contact & Web Bar -->
+    <div class="bottom-bar">
+      <div class="contact-block">
+        <!-- Vercel Website Link -->
+        <a href="https://swasthai-three.vercel.app/" target="_blank" class="contact-url">
+          swasthai-three.vercel.app →
+        </a>
+        <div class="contact-phone">Call / Direct: +91 9140721395</div>
+      </div>
+
+      <!-- WhatsApp Action -->
+      <a href="https://wa.me/919140721395?text=Hi%20Sankalp%2C%20I%20saw%20the%20SwasthAI%20flyer%20and%20want%20to%20see%20a%20demo%20for%20my%20clinic" target="_blank" class="whatsapp-cta">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp Demo
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
