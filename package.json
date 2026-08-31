@@ -1,0 +1,10 @@
+{
+  "name": "swasthai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd website && npm install && npm run build",
+    "dev": "cd website && npm run dev",
+    "start": "cd website && npm start"
+  }
+}
