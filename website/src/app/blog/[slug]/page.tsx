@@ -165,30 +165,79 @@ export default async function BlogPostPage({ params }: PageParams) {
   const relatedPosts = getRelatedPosts(slug, post.category);
   const toc = extractTableOfContents(post.content);
 
+  const categorySlug = post.category.toLowerCase().replace(/\s+/g, "-");
+  const authorSlug = post.author.toLowerCase().replace(/\s+/g, "-");
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: `${SITE_CONFIG.url}${post.featuredImage}`,
-    datePublished: post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: post.author,
-      jobTitle: post.authorRole,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "SwasthAI",
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_CONFIG.url}/img/logo-dark.png`,
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${SITE_CONFIG.url}/blog/${slug}#article`,
+        isPartOf: {
+          "@type": "WebPage",
+          "@id": `${SITE_CONFIG.url}/blog/${slug}`,
+        },
+        headline: post.title,
+        alternativeHeadline: post.subtitle || undefined,
+        description: post.excerpt,
+        image: `${SITE_CONFIG.url}${post.featuredImage}`,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        inLanguage: "en-IN",
+        keywords: post.tags?.join(", "),
+        articleSection: post.category,
+        author: {
+          "@type": "Person",
+          name: post.author,
+          jobTitle: post.authorRole,
+          url: `${SITE_CONFIG.url}/blog/author/${authorSlug}`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "SwasthAI",
+          url: SITE_CONFIG.url,
+          logo: {
+            "@type": "ImageObject",
+            url: `${SITE_CONFIG.url}/img/logo-dark.png`,
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${SITE_CONFIG.url}/blog/${slug}`,
+        },
       },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${SITE_CONFIG.url}/blog/${slug}`,
-    },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_CONFIG.url}/blog/${slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_CONFIG.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: `${SITE_CONFIG.url}/blog`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.category,
+            item: `${SITE_CONFIG.url}/blog/category/${categorySlug}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: post.title,
+            item: `${SITE_CONFIG.url}/blog/${slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (

@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
   email: "swasthai.founder@gmail.com",
   location: "Lucknow, Uttar Pradesh, IN",
   founder: {
-    name: "Founder",
+    name: "Sankalp Mishra",
     role: "Founder & CEO, SwasthAI",
     bio: "Building intelligent, accessible workflow technology for healthcare providers across India."
   },
