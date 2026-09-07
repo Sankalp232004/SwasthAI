@@ -1,5 +1,5 @@
 /* SwasthAI - Medical Triage System Styles */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
     color-scheme: light;
@@ -7,7 +7,7 @@
     /* Primary Brand Palette */
     --primary: #0F2C59;         /* SwasthAI Navy */
     --primary-light: #1E40AF;   /* Light Navy */
-    --primary-dark: #0A1E3F;    /* Deep Dark Navy */
+    --primary-dark: #07162C;    /* Deep Dark Navy */
     --secondary: #008080;       /* SwasthAI Teal */
     --secondary-light: #0D9488; /* Vibrant Teal */
     --accent: #E74C3C;          /* SwasthAI Coral/Red */
@@ -15,11 +15,11 @@
 
     /* Base Layout Colors */
     --bg-light: #F8FAFC;        /* Cool off-white background */
-    --bg-dark: #0F172A;         /* Dark mode hero background */
+    --bg-dark: #07162C;         /* Dark mode hero background */
     --surface: #FFFFFF;         /* Card & modal background */
     
     /* Text Color Scale */
-    --text-main: #1E293B;       /* High-contrast body text */
+    --text-main: #0F172A;       /* High-contrast body text */
     --text-secondary: #475569;  /* Muted text */
     --text-muted: #94A3B8;      /* Disabled/subtle text */
     --text-inverse: #FFFFFF;    /* White text on dark bg */
@@ -38,7 +38,7 @@
     --green: #10B981;
 
     /* Typography System */
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     
     /* Spacing Scale */
     --space-xs: 0.25rem; /* 4px */
@@ -48,20 +48,44 @@
     --space-xl: 2.5rem;  /* 40px */
     
     /* Component Border Radius */
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 16px;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
     --radius-pill: 50px;
 
     /* Shadow Tokens */
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+    --shadow-sm: 0 2px 5px rgba(15, 44, 89, 0.04);
+    --shadow-md: 0 8px 20px -4px rgba(15, 44, 89, 0.08);
+    --shadow-lg: 0 16px 36px -8px rgba(15, 44, 89, 0.14);
+}
+
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #07162C;
+}
+::-webkit-scrollbar-thumb {
+    background: #1A3D74;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #008080;
 }
 
 /* Landing Page */
 .landing-page {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: radial-gradient(circle at 85% 15%, rgba(0, 168, 168, 0.22), transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(30, 64, 175, 0.25), transparent 45%),
+                linear-gradient(135deg, #07162C 0%, #0F2C59 55%, #0A1E3F 100%);
     min-height: 100vh;
 }
 
@@ -71,7 +95,8 @@
 
 /* Ensure text inside white cards in landing-hero is dark */
 .landing-hero .card {
-    color: #212529;
+    color: #0F172A;
+    border-radius: var(--radius-lg);
 }
 
 .landing-hero .card h1,
@@ -80,12 +105,25 @@
 .landing-hero .card h4,
 .landing-hero .card h5,
 .landing-hero .card h6 {
-    color: #212529;
+    color: #0F2C59;
 }
 
 /* Option cards on landing pages */
 .option-card {
-    color: #212529;
+    color: #0F172A;
+    background: #FFFFFF;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 10px 30px -10px rgba(15, 44, 89, 0.12);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.option-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px rgba(15, 44, 89, 0.2), 0 0 20px rgba(0, 128, 128, 0.12);
+    border-color: rgba(0, 128, 128, 0.35);
 }
 
 .option-card h1,
@@ -94,8 +132,8 @@
 .option-card h4,
 .option-card h5,
 .option-card h6 {
-    color: #212529;
-    font-weight: 600;
+    color: #0F2C59;
+    font-weight: 700;
 }
 
 .logo-container {

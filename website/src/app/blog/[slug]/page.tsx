@@ -80,9 +80,12 @@ const mdxComponents = {
       .replace(/[^\w\s-]/g, "")
       .replace(/\s+/g, "-");
     return (
-      <h2 id={id} className="text-2xl sm:text-3xl font-extrabold text-[#0F2C59] tracking-tight mt-10 mb-4 scroll-mt-28">
-        {children}
-      </h2>
+      <div className="relative group mt-12 mb-5">
+        <h2 id={id} className="text-2xl sm:text-3xl font-extrabold text-[#0F2C59] tracking-tight scroll-mt-28 flex items-center gap-2.5">
+          <span className="w-1.5 h-6 rounded-full bg-gradient-to-b from-teal-500 to-[#0F2C59] inline-block shrink-0"></span>
+          <span>{children}</span>
+        </h2>
+      </div>
     );
   },
   h3: ({ children }: React.HTMLAttributes<HTMLHeadingElement>) => {
@@ -98,22 +101,22 @@ const mdxComponents = {
     );
   },
   p: ({ children }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="text-slate-700 leading-relaxed text-base sm:text-lg mb-6">
+    <p className="text-slate-700 leading-relaxed text-base sm:text-lg mb-6 tracking-normal">
       {children}
     </p>
   ),
   blockquote: ({ children }: React.HTMLAttributes<HTMLQuoteElement>) => (
-    <blockquote className="my-8 p-6 rounded-2xl bg-teal-50/60 border-l-4 border-teal-500 text-teal-950 italic text-base sm:text-lg font-medium shadow-xs">
-      {children}
+    <blockquote className="my-8 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-teal-50/80 via-emerald-50/40 to-teal-50/60 border-l-4 border-teal-500 text-[#0F2C59] italic text-base sm:text-lg font-medium shadow-xs relative">
+      <div className="relative z-10">{children}</div>
     </blockquote>
   ),
   ul: ({ children }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className="space-y-2.5 my-6 list-disc list-inside text-slate-700 text-base sm:text-lg">
+    <ul className="space-y-3 my-6 list-disc list-inside text-slate-700 text-base sm:text-lg pl-1">
       {children}
     </ul>
   ),
   ol: ({ children }: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol className="space-y-2.5 my-6 list-decimal list-inside text-slate-700 text-base sm:text-lg">
+    <ol className="space-y-3 my-6 list-decimal list-inside text-slate-700 text-base sm:text-lg pl-1">
       {children}
     </ol>
   ),
@@ -121,8 +124,8 @@ const mdxComponents = {
     <li className="leading-relaxed">{children}</li>
   ),
   table: ({ children }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-8 overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-      <table className="w-full text-left text-xs sm:text-sm text-slate-700">
+    <div className="my-8 overflow-x-auto rounded-2xl border border-slate-200/90 shadow-md bg-white">
+      <table className="w-full text-left text-xs sm:text-sm text-slate-700 divide-y divide-slate-200">
         {children}
       </table>
     </div>
@@ -133,18 +136,18 @@ const mdxComponents = {
     </thead>
   ),
   th: ({ children }: React.HTMLAttributes<HTMLTableCellElement>) => (
-    <th className="p-3.5 sm:p-4">{children}</th>
+    <th className="p-4 font-extrabold tracking-wider">{children}</th>
   ),
   td: ({ children }: React.HTMLAttributes<HTMLTableCellElement>) => (
-    <td className="p-3.5 sm:p-4 border-t border-slate-200">{children}</td>
+    <td className="p-4 border-t border-slate-100/90 leading-relaxed">{children}</td>
   ),
   pre: ({ children }: React.HTMLAttributes<HTMLPreElement>) => (
-    <pre className="my-6 p-4 sm:p-5 rounded-2xl bg-[#07162C] text-teal-300 font-mono text-xs sm:text-sm overflow-x-auto border border-white/10 shadow-lg">
+    <pre className="my-7 p-5 sm:p-6 rounded-2xl bg-[#07162C] text-teal-300 font-mono text-xs sm:text-sm overflow-x-auto border border-teal-500/20 shadow-xl">
       {children}
     </pre>
   ),
   code: ({ children }: React.HTMLAttributes<HTMLElement>) => (
-    <code className="px-1.5 py-0.5 rounded-md bg-slate-100 text-teal-800 font-mono text-xs sm:text-sm font-semibold border border-slate-200">
+    <code className="px-2 py-0.5 rounded-md bg-teal-50 text-teal-900 font-mono text-xs sm:text-sm font-semibold border border-teal-200/60">
       {children}
     </code>
   ),
@@ -249,90 +252,99 @@ export default async function BlogPostPage({ params }: PageParams) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Header Banner */}
-      <section className="bg-[#0F2C59] text-white py-12 sm:py-16 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      {/* Hero Header Banner */}
+      <section className="bg-gradient-to-br from-[#0F2C59] via-[#12366A] to-[#07162C] text-white py-14 sm:py-20 border-b border-white/10 relative overflow-hidden">
+        {/* Subtle Radial Glow Backdrops */}
+        <div className="absolute top-0 right-1/4 -mt-20 w-96 h-96 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <Breadcrumbs
             items={[
               { label: "Blog", href: "/blog" },
-              { label: post.category, href: `/blog/category/${post.category.toLowerCase().replace(/\s+/g, "-")}` },
+              { label: post.category, href: `/blog/category/${categorySlug}` },
               { label: post.title },
             ]}
           />
 
           <div className="space-y-4">
-            <Link
-              href={`/blog/category/${post.category.toLowerCase().replace(/\s+/g, "-")}`}
-              className="inline-block px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-400/30 hover:bg-teal-500/30 transition-colors"
-            >
-              {post.category}
-            </Link>
+            <div className="flex items-center gap-2.5 flex-wrap">
+              <Link
+                href={`/blog/category/${categorySlug}`}
+                className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-400/30 hover:bg-teal-500/30 transition-all shadow-xs"
+              >
+                <span>{post.category}</span>
+              </Link>
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-slate-300 text-xs font-medium border border-white/10">
+                <Clock className="w-3.5 h-3.5 text-teal-400" />
+                <span>{post.readingTime}</span>
+              </span>
+            </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white">
               {post.title}
             </h1>
 
             {post.subtitle && (
-              <p className="text-base sm:text-xl text-slate-300 leading-relaxed">
+              <p className="text-base sm:text-xl text-slate-300 leading-relaxed font-normal pt-1">
                 {post.subtitle}
               </p>
             )}
           </div>
 
-          {/* Metadata Row */}
-          <div className="pt-4 border-t border-white/15 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-slate-300">
-            <Link href={`/blog/author/${post.author.toLowerCase().replace(/\s+/g, "-")}`} className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30 flex items-center justify-center font-bold text-sm">
+          {/* Author & Published Metadata Bar */}
+          <div className="pt-6 border-t border-white/15 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-slate-300">
+            <Link href={`/blog/author/${authorSlug}`} className="flex items-center space-x-3.5 group">
+              <div className="w-11 h-11 rounded-2xl bg-teal-500/20 text-teal-300 border border-teal-400/40 flex items-center justify-center font-extrabold text-base shadow-sm group-hover:scale-105 transition-transform">
                 {post.author.charAt(0)}
               </div>
               <div>
-                <span className="block font-bold text-white group-hover:text-teal-300 transition-colors">
-                  {post.author}
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="font-bold text-white group-hover:text-teal-300 transition-colors text-sm">
+                    {post.author}
+                  </span>
+                  <span className="w-2 h-2 rounded-full bg-teal-400 inline-block"></span>
+                </div>
                 <span className="block text-xs text-slate-400">{post.authorRole}</span>
               </div>
             </Link>
 
-            <div className="flex items-center space-x-4">
-              <span className="flex items-center gap-1.5">
+            <div className="flex items-center space-x-4 text-xs sm:text-sm font-medium">
+              <span className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10">
                 <Calendar className="w-4 h-4 text-teal-400" />
                 {post.publishedAt}
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-teal-400" />
-                {post.readingTime}
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Body */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Main Content Area */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
           {/* Main Article Content */}
           <article className="lg:col-span-8 space-y-8">
             
             {/* Featured Image */}
-            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950">
+            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-950 group">
               <Image
                 src={post.featuredImage}
                 alt={post.title}
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 priority
               />
             </div>
 
-            {/* Share Buttons Row */}
-            <div className="py-4 border-y border-slate-100 flex items-center justify-between flex-wrap gap-4">
+            {/* Social Share & Engagement Bar */}
+            <div className="py-4 px-6 rounded-2xl bg-slate-50/80 border border-slate-200/80 flex items-center justify-between flex-wrap gap-4 shadow-xs">
+              <span className="text-xs font-bold text-[#0F2C59] uppercase tracking-wider">Share this article:</span>
               <ShareButtons title={post.title} slug={slug} />
             </div>
 
             {/* Rendered MDX Content */}
-            <div className="prose prose-slate max-w-none">
+            <div className="prose prose-slate max-w-none prose-headings:font-bold prose-a:text-teal-700 prose-a:font-semibold prose-a:underline hover:prose-a:text-teal-900">
               <MDXRemote source={post.content} components={mdxComponents} />
             </div>
 
@@ -344,13 +356,13 @@ export default async function BlogPostPage({ params }: PageParams) {
               {prevPost ? (
                 <Link
                   href={`/blog/${prevPost.slug}`}
-                  className="p-4 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-left transition-all space-y-1 group"
+                  className="p-5 rounded-2xl bg-slate-50 hover:bg-teal-50/50 border border-slate-200/90 text-left transition-all space-y-1.5 group shadow-xs hover:border-teal-500/40"
                 >
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1">
-                    <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
+                  <span className="text-[10px] font-bold text-slate-400 group-hover:text-teal-700 uppercase tracking-widest flex items-center gap-1">
+                    <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
                     Previous Article
                   </span>
-                  <span className="block text-xs font-bold text-[#0F2C59] group-hover:text-teal-700 transition-colors line-clamp-1">
+                  <span className="block text-sm font-bold text-[#0F2C59] group-hover:text-teal-800 transition-colors line-clamp-2">
                     {prevPost.title}
                   </span>
                 </Link>
@@ -359,13 +371,13 @@ export default async function BlogPostPage({ params }: PageParams) {
               {nextPost ? (
                 <Link
                   href={`/blog/${nextPost.slug}`}
-                  className="p-4 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-right transition-all space-y-1 group sm:col-start-2"
+                  className="p-5 rounded-2xl bg-slate-50 hover:bg-teal-50/50 border border-slate-200/90 text-right transition-all space-y-1.5 group sm:col-start-2 shadow-xs hover:border-teal-500/40"
                 >
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center justify-end gap-1">
+                  <span className="text-[10px] font-bold text-slate-400 group-hover:text-teal-700 uppercase tracking-widest flex items-center justify-end gap-1">
                     Next Article
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <span className="block text-xs font-bold text-[#0F2C59] group-hover:text-teal-700 transition-colors line-clamp-1">
+                  <span className="block text-sm font-bold text-[#0F2C59] group-hover:text-teal-800 transition-colors line-clamp-2">
                     {nextPost.title}
                   </span>
                 </Link>
@@ -376,28 +388,41 @@ export default async function BlogPostPage({ params }: PageParams) {
 
           {/* Sidebar Area */}
           <aside className="lg:col-span-4 space-y-8">
-            <TableOfContents toc={toc} />
+            <div className="sticky top-28 space-y-8">
+              <TableOfContents toc={toc} />
 
-            {/* Author Profile Sidebar Card */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-2xl bg-[#0F2C59] text-white flex items-center justify-center font-extrabold text-xl">
-                  {post.author.charAt(0)}
+              {/* Author Profile Card */}
+              <div className="p-6 rounded-3xl bg-gradient-to-br from-slate-50 to-teal-50/30 border border-slate-200/80 shadow-md space-y-4">
+                <div className="flex items-center space-x-3.5">
+                  <div className="w-14 h-14 rounded-2xl bg-[#0F2C59] text-white flex items-center justify-center font-extrabold text-2xl shadow-md">
+                    {post.author.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="text-base font-extrabold text-[#0F2C59]">{post.author}</h4>
+                    <span className="block text-xs text-teal-700 font-semibold">{post.authorRole}</span>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-sm font-bold text-[#0F2C59]">{post.author}</h4>
-                  <span className="block text-xs text-teal-700 font-medium">{post.authorRole}</span>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Building intelligent, accessible workflow technology for healthcare providers across India.
+                </p>
+                <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
+                  <Link
+                    href={`/blog/author/${authorSlug}`}
+                    className="inline-flex items-center gap-1 text-xs font-bold text-teal-700 hover:text-teal-900 transition-colors"
+                  >
+                    <span>View all articles</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <a
+                    href="https://wa.me/919140721395?text=Hi%20Sankalp,%20I%20read%20your%20blog%20post%20and%20would%20like%20to%20connect."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[#25D366] hover:underline"
+                  >
+                    <span>Connect</span>
+                  </a>
                 </div>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Building intelligent, accessible workflow technology for healthcare providers across India.
-              </p>
-              <Link
-                href={`/blog/author/${post.author.toLowerCase().replace(/\s+/g, "-")}`}
-                className="inline-block text-xs font-bold text-teal-700 hover:underline"
-              >
-                View Author Articles →
-              </Link>
             </div>
           </aside>
 
@@ -405,13 +430,13 @@ export default async function BlogPostPage({ params }: PageParams) {
 
         {/* Related Articles Section */}
         {relatedPosts.length > 0 && (
-          <div className="pt-16 border-t border-slate-200 space-y-8">
+          <div className="pt-16 mt-16 border-t border-slate-200 space-y-8">
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-widest text-teal-700">Explore Related Topics</span>
-              <h3 className="text-2xl font-extrabold text-[#0F2C59]">Related Articles</h3>
+              <span className="text-xs font-bold uppercase tracking-widest text-teal-700">Continue Reading</span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0F2C59]">Related Articles & Case Studies</h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {relatedPosts.map((rPost) => (
                 <BlogCard key={rPost.slug} post={rPost} />
               ))}
