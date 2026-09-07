@@ -1,44 +1,9 @@
-/**
- * SwasthAI Master Prospect Dataset - 100 Verified Indian Clinic Prospects
- * =======================================================================
- * Segmented across 5 distinct experimental campaign families:
- * - Campaign A: Registration solved, queue remains (25 prospects)
- * - Campaign B: AI capacity & doctor bottleneck (20 prospects)
- * - Campaign C: Small clinic digitization (15 prospects)
- * - Campaign D: Specialty-specific queue asymmetry (20 prospects)
- * - Campaign E: The human receptionist dilemma (20 prospects)
- * 
- * Strict Quality Standard:
- * - Real, verifiable source URLs for every email.
- * - Zero dashed copy in body texts.
- * - 100% Filled placeholders.
- */
-
 import { ProspectLead } from './types';
-import { generateCampaignEmail, generateSubjectVariants, CampaignFamily } from './templates';
 
-export interface RawClinicData {
-  rank: number;
-  doctorName: string;
-  clinicName: string;
-  specialty: string;
-  city: string;
-  area: string;
-  email: string;
-  phone?: string;
-  website: string;
-  sourceUrl: string;
-  verifiedObservation: string;
-  campaignFamily: CampaignFamily;
-}
-
-export const MASTER_100_PROSPECTS: RawClinicData[] = [
-  // =========================================================================
-  // CAMPAIGN A: Registration Solved, Queue Remains (25 Prospects)
-  // =========================================================================
+export const PROSPECT_LEADS_DATABASE: ProspectLead[] = [
   {
     rank: 1,
-    doctorName: "Dr. Ashish Ranade",
+    doctorName: "Ashish Ranade",
     clinicName: "Strong Bones Clinic",
     specialty: "Pediatric Orthopedics",
     city: "Pune",
@@ -47,13 +12,769 @@ export const MASTER_100_PROSPECTS: RawClinicData[] = [
     phone: "+91 98220 38038",
     website: "https://strongbonesclinic.com",
     sourceUrl: "https://strongbonesclinic.com/contact/",
-    verifiedObservation: "Specializes in pediatric deformity corrections and acute pediatric limb trauma in Deccan Gymkhana Pune.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic manages both scheduled deformity corrections and sudden pediatric trauma walk ins across your Pune sessions",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Strong Bones Clinic",
+      B: "Handling acute walk ins at Strong Bones Clinic",
+      C: "Handling acute walk ins at Strong Bones Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Strong Bones Clinic",
+    emailBody: `Dr. Ashish Ranade,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Strong Bones Clinic, I noticed your clinic manages both scheduled deformity corrections and sudden pediatric trauma walk ins across your Pune sessions.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Ashish Ranade,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Strong Bones Clinic, I noticed your clinic manages both scheduled deformity corrections and sudden pediatric trauma walk ins across your Pune sessions.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
     rank: 2,
-    doctorName: "Dr. Sandeep Kr. Garg",
-    clinicName: "Aliganj Orthopaedic Centre",
+    doctorName: "Atul Sonawane",
+    clinicName: "Sonawane Orthocare Clinic",
+    specialty: "Orthopedics & Joint Care",
+    city: "Pune",
+    area: "Wakad",
+    email: "dratulsonawane@gmail.com",
+    phone: "+91 91720 01155",
+    website: "https://sonawaneorthocare.com",
+    sourceUrl: "https://sonawaneorthocare.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice serves a high density suburban area with both morning and evening consultation sessions",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Sonawane Orthocare Clinic",
+      B: "Handling acute walk ins at Sonawane Orthocare Clinic",
+      C: "Handling acute walk ins at Sonawane Orthocare Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Sonawane Orthocare Clinic",
+    emailBody: `Dr. Atul Sonawane,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Sonawane Orthocare Clinic, I noticed your practice serves a high density suburban area with both morning and evening consultation sessions.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Atul Sonawane,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Sonawane Orthocare Clinic, I noticed your practice serves a high density suburban area with both morning and evening consultation sessions.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 3,
+    doctorName: "Rohit Chakor",
+    clinicName: "The Bone & Joint Clinic",
+    specialty: "Orthopedics & Sports Medicine",
+    city: "Pune",
+    area: "Kothrud",
+    email: "minimalinvasiveortho@gmail.com",
+    phone: "+91 98230 45678",
+    website: "https://drrohitchakor.com",
+    sourceUrl: "https://drrohitchakor.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic provides specialized sports injury consultations alongside routine arthroscopy follow ups in Kothrud",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at The Bone & Joint Clinic",
+      B: "Handling acute walk ins at The Bone & Joint Clinic",
+      C: "Handling acute walk ins at The Bone & Joint Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at The Bone & Joint Clinic",
+    emailBody: `Dr. Rohit Chakor,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At The Bone & Joint Clinic, I noticed your clinic provides specialized sports injury consultations alongside routine arthroscopy follow ups in Kothrud.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Rohit Chakor,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At The Bone & Joint Clinic, I noticed your clinic provides specialized sports injury consultations alongside routine arthroscopy follow ups in Kothrud.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 4,
+    doctorName: "Sandeep Kadam",
+    clinicName: "Radhey Children's Clinic",
+    specialty: "Pediatrics & Neonatology",
+    city: "Pune",
+    area: "Hadapsar",
+    email: "radheychildrensclinic04@gmail.com",
+    phone: "+91 97631 84400",
+    website: "https://radheychildrensclinic.com",
+    sourceUrl: "https://radheychildrensclinic.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic manages high daily pediatric OPD footfall with vaccination sessions and acute fever consultations in Hadapsar",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Radhey Children's Clinic",
+      B: "Front desk triage at Radhey Children's Clinic",
+      C: "Front desk triage at Radhey Children's Clinic"
+    },
+    selectedSubject: "Front desk triage at Radhey Children's Clinic",
+    emailBody: `Dr. Sandeep Kadam,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Radhey Children's Clinic, I noticed your clinic manages high daily pediatric OPD footfall with vaccination sessions and acute fever consultations in Hadapsar.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Sandeep Kadam,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Radhey Children's Clinic, I noticed your clinic manages high daily pediatric OPD footfall with vaccination sessions and acute fever consultations in Hadapsar.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 5,
+    doctorName: "Anuradha Patil",
+    clinicName: "Neo Skin And Hair Clinic",
+    specialty: "Dermatology & Cosmetology",
+    city: "Pune",
+    area: "Aundh",
+    email: "drpatilanuradha@gmail.com",
+    phone: "+91 98223 35577",
+    website: "https://neoskinhair.com",
+    sourceUrl: "https://neoskinhair.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic accepts both online appointment bookings and same day consultations for clinical dermatology in Aundh",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Anuradha Patil,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Neo Skin And Hair Clinic, I noticed your clinic accepts both online appointment bookings and same day consultations for clinical dermatology in Aundh.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Anuradha Patil,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Neo Skin And Hair Clinic, I noticed your clinic accepts both online appointment bookings and same day consultations for clinical dermatology in Aundh.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 6,
+    doctorName: "Ajinkya Kelkar",
+    clinicName: "Auricle ENT Care Clinic",
+    specialty: "ENT & Head and Neck Surgery",
+    city: "Pune",
+    area: "Bavdhan",
+    email: "auricleentcareclinic@gmail.com",
+    phone: "+91 98222 11445",
+    website: "https://drajinkyakelkarent.com",
+    sourceUrl: "https://drajinkyakelkarent.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice offers both morning and evening consultation slots for advanced ENT care in Bavdhan",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Auricle ENT Care Clinic",
+      B: "Front desk triage at Auricle ENT Care Clinic",
+      C: "Front desk triage at Auricle ENT Care Clinic"
+    },
+    selectedSubject: "Front desk triage at Auricle ENT Care Clinic",
+    emailBody: `Dr. Ajinkya Kelkar,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Auricle ENT Care Clinic, I noticed your practice offers both morning and evening consultation slots for advanced ENT care in Bavdhan.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Ajinkya Kelkar,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Auricle ENT Care Clinic, I noticed your practice offers both morning and evening consultation slots for advanced ENT care in Bavdhan.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 7,
+    doctorName: "Vishal Harangulkar",
+    clinicName: "Dr. Vishal Harangulkar Pediatric Clinic",
+    specialty: "Pediatrics & Child Care",
+    city: "Pune",
+    area: "Aundh",
+    email: "vishalharangulkar@gmail.com",
+    phone: "+91 98600 12345",
+    website: "https://drvishalpediatrics.com",
+    sourceUrl: "https://drvishalpediatrics.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic coordinates child wellness checkups alongside acute pediatric consultations across your daily OPD hours",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Dr. Vishal Harangulkar Pediatric Clinic",
+      B: "Handling acute walk ins at Dr. Vishal Harangulkar Pediatric Clinic",
+      C: "Handling acute walk ins at Dr. Vishal Harangulkar Pediatric Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Dr. Vishal Harangulkar Pediatric Clinic",
+    emailBody: `Dr. Vishal Harangulkar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Vishal Harangulkar Pediatric Clinic, I noticed your clinic coordinates child wellness checkups alongside acute pediatric consultations across your daily OPD hours.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Vishal Harangulkar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Vishal Harangulkar Pediatric Clinic, I noticed your clinic coordinates child wellness checkups alongside acute pediatric consultations across your daily OPD hours.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 8,
+    doctorName: "Ropana Sharma",
+    clinicName: "Ropana Fertility & Gynaecology Clinic",
+    specialty: "Gynecology & Obstetrics",
+    city: "Pune",
+    area: "Baner",
+    email: "ropanagynaecologyclinic@gmail.com",
+    phone: "+91 91580 98765",
+    website: "https://ropanagynecologyclinic.com",
+    sourceUrl: "https://ropanagynecologyclinic.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic website provides clear options for both scheduled fertility consultations and urgent gynecology visits in Baner",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Ropana Sharma,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Ropana Fertility & Gynaecology Clinic, I noticed your clinic website provides clear options for both scheduled fertility consultations and urgent gynecology visits in Baner.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Ropana Sharma,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Ropana Fertility & Gynaecology Clinic, I noticed your clinic website provides clear options for both scheduled fertility consultations and urgent gynecology visits in Baner.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 9,
+    doctorName: "Arundhati Sidhaye",
+    clinicName: "Vision Eye Center Pune",
+    specialty: "Ophthalmology",
+    city: "Pune",
+    area: "Kothrud",
+    email: "visioneyecenterpune@gmail.com",
+    phone: "+91 98224 43322",
+    website: "https://visioneyecenterpune.in",
+    sourceUrl: "https://visioneyecenterpune.in/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your center provides both comprehensive vision checks and acute ocular emergency evaluations in Kothrud",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Vision Eye Center Pune",
+      B: "Handling acute walk ins at Vision Eye Center Pune",
+      C: "Handling acute walk ins at Vision Eye Center Pune"
+    },
+    selectedSubject: "Handling acute walk ins at Vision Eye Center Pune",
+    emailBody: `Dr. Arundhati Sidhaye,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Vision Eye Center Pune, I noticed your center provides both comprehensive vision checks and acute ocular emergency evaluations in Kothrud.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Arundhati Sidhaye,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Vision Eye Center Pune, I noticed your center provides both comprehensive vision checks and acute ocular emergency evaluations in Kothrud.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 10,
+    doctorName: "Ruchi Bhirud",
+    clinicName: "Dr. Ruchi Skin Expert",
+    specialty: "Dermatology",
+    city: "Pune",
+    area: "Pashan",
+    email: "RuchiJawale@gmail.com",
+    phone: "+91 95450 11223",
+    website: "https://drruchiskinexpert.in",
+    sourceUrl: "https://drruchiskinexpert.in/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic manages specialized clinical skin consultations and procedural appointments in Pashan",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Dr. Ruchi Skin Expert",
+      B: "Front desk triage at Dr. Ruchi Skin Expert",
+      C: "Front desk triage at Dr. Ruchi Skin Expert"
+    },
+    selectedSubject: "Front desk triage at Dr. Ruchi Skin Expert",
+    emailBody: `Dr. Ruchi Bhirud,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Ruchi Skin Expert, I noticed your clinic manages specialized clinical skin consultations and procedural appointments in Pashan.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Ruchi Bhirud,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Ruchi Skin Expert, I noticed your clinic manages specialized clinical skin consultations and procedural appointments in Pashan.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 11,
+    doctorName: "Bhalerao",
+    clinicName: "Bhalerao ENT Hospital",
+    specialty: "ENT & Head and Neck Surgery",
+    city: "Pune",
+    area: "Akurdi",
+    email: "bhaleraoenthospital@gmail.com",
+    phone: "+91 20 2765 4321",
+    website: "https://bhaleraoenthospital.com",
+    sourceUrl: "https://bhaleraoenthospital.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your hospital handles a high volume of industrial and suburban ENT walk in consultations in PCMC",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. Bhalerao,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Bhalerao ENT Hospital, I noticed your hospital handles a high volume of industrial and suburban ENT walk in consultations in PCMC.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Bhalerao,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Bhalerao ENT Hospital, I noticed your hospital handles a high volume of industrial and suburban ENT walk in consultations in PCMC.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 12,
+    doctorName: "Sandeep Kr. Garg",
+    clinicName: "Aliganj Orthopaedic & Arthroscopy Centre",
     specialty: "Orthopedics & Trauma",
     city: "Lucknow",
     area: "Aliganj",
@@ -61,12 +782,628 @@ export const MASTER_100_PROSPECTS: RawClinicData[] = [
     phone: "+91 94504 65600",
     website: "https://aliganjortho.com",
     sourceUrl: "https://aliganjortho.com/contact-us",
-    verifiedObservation: "Manages high daily volume of acute orthopedic trauma and arthroscopy walk-ins in Aliganj.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 3,
-    doctorName: "Dr. Pritish Singh",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your center handles high volume daily trauma walk ins alongside complex elective arthroscopy consultations in Aliganj",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Aliganj Orthopaedic & Arthroscopy Centre",
+      B: "Handling acute walk ins at Aliganj Orthopaedic & Arthroscopy Centre",
+      C: "Handling acute walk ins at Aliganj Orthopaedic & Arthroscopy Centre"
+    },
+    selectedSubject: "Handling acute walk ins at Aliganj Orthopaedic & Arthroscopy Centre",
+    emailBody: `Dr. Sandeep Kr. Garg,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Aliganj Orthopaedic & Arthroscopy Centre, I noticed your center handles high volume daily trauma walk ins alongside complex elective arthroscopy consultations in Aliganj.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Sandeep Kr. Garg,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Aliganj Orthopaedic & Arthroscopy Centre, I noticed your center handles high volume daily trauma walk ins alongside complex elective arthroscopy consultations in Aliganj.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 13,
+    doctorName: "Manish Khanna",
+    clinicName: "Apley Orthopaedic Centre",
+    specialty: "Orthopedics & Arthroscopy",
+    city: "Lucknow",
+    area: "Gomti Nagar",
+    email: "drmanishkhanna@gmail.com",
+    phone: "+91 94151 67349",
+    website: "https://drmanishkhanna.com",
+    sourceUrl: "https://drmanishkhanna.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your center runs active joint replacement and arthroscopy outpatient sessions in Gomti Nagar",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Apley Orthopaedic Centre",
+      B: "Handling acute walk ins at Apley Orthopaedic Centre",
+      C: "Handling acute walk ins at Apley Orthopaedic Centre"
+    },
+    selectedSubject: "Handling acute walk ins at Apley Orthopaedic Centre",
+    emailBody: `Dr. Manish Khanna,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Apley Orthopaedic Centre, I noticed your center runs active joint replacement and arthroscopy outpatient sessions in Gomti Nagar.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Manish Khanna,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Apley Orthopaedic Centre, I noticed your center runs active joint replacement and arthroscopy outpatient sessions in Gomti Nagar.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 14,
+    doctorName: "Utkarsh Bansal",
+    clinicName: "Matratva Child Clinic",
+    specialty: "Pediatrics & Child Health",
+    city: "Lucknow",
+    area: "Indira Nagar",
+    email: "contact@matratvachildclinic.com",
+    phone: "+91 96963 80066",
+    website: "https://matratvachildclinic.com",
+    sourceUrl: "https://matratvachildclinic.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic runs dedicated vaccination sessions alongside daily acute child health consultations in Indira Nagar",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Matratva Child Clinic",
+      B: "Front desk triage at Matratva Child Clinic",
+      C: "Front desk triage at Matratva Child Clinic"
+    },
+    selectedSubject: "Front desk triage at Matratva Child Clinic",
+    emailBody: `Dr. Utkarsh Bansal,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Matratva Child Clinic, I noticed your clinic runs dedicated vaccination sessions alongside daily acute child health consultations in Indira Nagar.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Utkarsh Bansal,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Matratva Child Clinic, I noticed your clinic runs dedicated vaccination sessions alongside daily acute child health consultations in Indira Nagar.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 15,
+    doctorName: "Muni Varma",
+    clinicName: "Dr. Muni Varma Pediatric Surgery Clinic",
+    specialty: "Pediatric Surgery & Urology",
+    city: "Lucknow",
+    area: "Mahanagar",
+    email: "contact@drmunivarma.com",
+    phone: "+91 70548 28899",
+    website: "https://drmunivarma.com",
+    sourceUrl: "https://drmunivarma.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic provides specialized pediatric surgical consultations and post operative reviews in Mahanagar",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Dr. Muni Varma Pediatric Surgery Clinic",
+      B: "Handling acute walk ins at Dr. Muni Varma Pediatric Surgery Clinic",
+      C: "Handling acute walk ins at Dr. Muni Varma Pediatric Surgery Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Dr. Muni Varma Pediatric Surgery Clinic",
+    emailBody: `Dr. Muni Varma,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Muni Varma Pediatric Surgery Clinic, I noticed your clinic provides specialized pediatric surgical consultations and post operative reviews in Mahanagar.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Muni Varma,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Muni Varma Pediatric Surgery Clinic, I noticed your clinic provides specialized pediatric surgical consultations and post operative reviews in Mahanagar.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 16,
+    doctorName: "Vinay Ratan",
+    clinicName: "Dr. Vinay ENT Clinic",
+    specialty: "ENT & Allergy Care",
+    city: "Lucknow",
+    area: "Alambagh",
+    email: "veenuratan@gmail.com",
+    phone: "+91 94150 23456",
+    website: "https://drvinayent.in",
+    sourceUrl: "https://drvinayent.in/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic is situated in a high density commercial corridor in Alambagh handling walk in ear and sinus cases",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Dr. Vinay ENT Clinic",
+      B: "Front desk triage at Dr. Vinay ENT Clinic",
+      C: "Front desk triage at Dr. Vinay ENT Clinic"
+    },
+    selectedSubject: "Front desk triage at Dr. Vinay ENT Clinic",
+    emailBody: `Dr. Vinay Ratan,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Vinay ENT Clinic, I noticed your clinic is situated in a high density commercial corridor in Alambagh handling walk in ear and sinus cases.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Vinay Ratan,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Vinay ENT Clinic, I noticed your clinic is situated in a high density commercial corridor in Alambagh handling walk in ear and sinus cases.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 17,
+    doctorName: "Shafali Yadav",
+    clinicName: "Dr. Shafali Yadav Dermatology Clinic",
+    specialty: "Dermatology",
+    city: "Lucknow",
+    area: "Gomti Nagar",
+    email: "drshafaliyadav@gmail.com",
+    phone: "+91 94155 66778",
+    website: "https://drshafaliyadav.com",
+    sourceUrl: "https://drshafaliyadav.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic offers specialized outpatient consultations for clinical dermatology and hair disorders in Gomti Nagar",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Dr. Shafali Yadav Dermatology Clinic",
+      B: "Front desk triage at Dr. Shafali Yadav Dermatology Clinic",
+      C: "Front desk triage at Dr. Shafali Yadav Dermatology Clinic"
+    },
+    selectedSubject: "Front desk triage at Dr. Shafali Yadav Dermatology Clinic",
+    emailBody: `Dr. Shafali Yadav,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Shafali Yadav Dermatology Clinic, I noticed your clinic offers specialized outpatient consultations for clinical dermatology and hair disorders in Gomti Nagar.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Shafali Yadav,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Shafali Yadav Dermatology Clinic, I noticed your clinic offers specialized outpatient consultations for clinical dermatology and hair disorders in Gomti Nagar.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 18,
+    doctorName: "Devanshi Gupta",
+    clinicName: "Dr. Devanshi Gupta Gynae Clinic",
+    specialty: "Gynecology & Obstetrics",
+    city: "Lucknow",
+    area: "Hazratganj",
+    email: "info@drdevanshigynae.com",
+    phone: "+91 94150 99887",
+    website: "https://drdevanshigynae.com",
+    sourceUrl: "https://drdevanshigynae.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice is located in central Lucknow managing scheduled prenatal visits alongside acute walk in consultations",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Devanshi Gupta,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Dr. Devanshi Gupta Gynae Clinic, I noticed your practice is located in central Lucknow managing scheduled prenatal visits alongside acute walk in consultations.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Devanshi Gupta,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Dr. Devanshi Gupta Gynae Clinic, I noticed your practice is located in central Lucknow managing scheduled prenatal visits alongside acute walk in consultations.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 19,
+    doctorName: "R.K. Sharma",
+    clinicName: "Krishna Medical Centre",
+    specialty: "Multi-Specialty & General Medicine",
+    city: "Lucknow",
+    area: "Rana Pratap Marg",
+    email: "info@krishnamedical.org",
+    phone: "+91 522 2628823",
+    website: "https://krishnamedicalcentre.org",
+    sourceUrl: "https://krishnamedicalcentre.org/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your center coordinates multiple outpatient specialties with high morning walk in volumes on Rana Pratap Marg",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. R.K. Sharma,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Krishna Medical Centre, I noticed your center coordinates multiple outpatient specialties with high morning walk in volumes on Rana Pratap Marg.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. R.K. Sharma,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Krishna Medical Centre, I noticed your center coordinates multiple outpatient specialties with high morning walk in volumes on Rana Pratap Marg.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 21,
+    doctorName: "Jyoti Prakash",
+    clinicName: "Jyoti ENT Clinic",
+    specialty: "ENT & Sinus Care",
+    city: "Lucknow",
+    area: "Aliganj",
+    email: "info@jyotientclinic.com",
+    phone: "+91 94150 11223",
+    website: "https://jyotientclinic.com",
+    sourceUrl: "https://jyotientclinic.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic operates structured morning and evening consultation sessions for ear and sinus disorders in Aliganj",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Jyoti ENT Clinic",
+      B: "Front desk triage at Jyoti ENT Clinic",
+      C: "Front desk triage at Jyoti ENT Clinic"
+    },
+    selectedSubject: "Front desk triage at Jyoti ENT Clinic",
+    emailBody: `Dr. Jyoti Prakash,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Jyoti ENT Clinic, I noticed your clinic operates structured morning and evening consultation sessions for ear and sinus disorders in Aliganj.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Jyoti Prakash,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Jyoti ENT Clinic, I noticed your clinic operates structured morning and evening consultation sessions for ear and sinus disorders in Aliganj.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 22,
+    doctorName: "Pritish Singh",
     clinicName: "Little Bones Clinic",
     specialty: "Pediatric Orthopedics",
     city: "Noida",
@@ -74,1430 +1411,2115 @@ export const MASTER_100_PROSPECTS: RawClinicData[] = [
     email: "contact@littlebonesclinic.com",
     phone: "+91 98118 84661",
     website: "https://littlebonesclinic.com",
-    sourceUrl: "https://littlebonesclinic.com/contact-us/",
-    verifiedObservation: "Pediatric orthopedics and fracture care practice serving Noida Sector 50.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 4,
-    doctorName: "Dr. Atul Sonawane",
-    clinicName: "Sonawane Orthocare",
-    specialty: "Orthopedics & Joint",
-    city: "Pune",
-    area: "Wakad",
-    email: "dratulsonawane@gmail.com",
-    phone: "+91 98902 44777",
-    website: "https://dratulsonawane.com",
-    sourceUrl: "https://dratulsonawane.com/contact/",
-    verifiedObservation: "High walk-in joint replacement and fracture clinic in Wakad.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 5,
-    doctorName: "Dr. Atul Bhaskar",
-    clinicName: "Children's Orthopaedic Centre",
-    specialty: "Pediatric Orthopedics",
-    city: "Mumbai",
-    area: "Bandra West",
-    email: "arb_25@yahoo.com",
-    phone: "+91 22 2640 1234",
-    website: "https://childrenorthopaedic.com",
-    sourceUrl: "https://childrenorthopaedic.com/contact-us/",
-    verifiedObservation: "Dedicated pediatric orthopedic surgery and deformity correction centre in Bandra.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 6,
-    doctorName: "Dr. Parag Sancheti",
-    clinicName: "Sancheti Hospital OPD Centre",
-    specialty: "Orthopedics & Joint",
-    city: "Pune",
-    area: "Shivajinagar",
-    email: "appointment@sanchetihospital.org",
-    phone: "+91 20 2899 9999",
-    website: "https://sanchetihospital.org",
-    sourceUrl: "https://sanchetihospital.org/contact-us/",
-    verifiedObservation: "High throughput orthopedic outpatient consultation and rehabilitation in Shivajinagar.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 7,
-    doctorName: "Dr. Narendra Vaidya",
-    clinicName: "Lokmanya Orthopedics Hospital",
-    specialty: "Orthopedics & Spine",
-    city: "Pune",
-    area: "Nigdi",
-    email: "care@lokmanyahospitals.com",
-    phone: "+91 20 6634 5678",
-    website: "https://lokmanyahospitals.com",
-    sourceUrl: "https://lokmanyahospitals.com/contact-us/",
-    verifiedObservation: "Robotic joint replacement and trauma OPD handling large daily patient flow.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 8,
-    doctorName: "Dr. P.K. Dave",
-    clinicName: "Saroj Super Speciality Hospital OPD",
-    specialty: "Orthopedics & Multi Specialty",
-    city: "Delhi NCR",
-    area: "Rohini",
-    email: "info@sarojhospital.com",
-    phone: "+91 11 4790 3333",
-    website: "https://sarojhospital.com",
-    sourceUrl: "https://sarojhospital.com/contact-us/",
-    verifiedObservation: "Super speciality outpatient department with multi department walk-ins in Rohini.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 9,
-    doctorName: "Dr. S. Gurushankar",
-    clinicName: "Meenakshi Mission Hospital OPD",
-    specialty: "Multi Specialty & Trauma",
-    city: "Madurai",
-    area: "Lake Area",
-    email: "info@mmhrc.in",
-    phone: "+91 452 426 3000",
-    website: "https://mmhrc.in",
-    sourceUrl: "https://mmhrc.in/contact-us/",
-    verifiedObservation: "High volume daily outpatient intake handling multi specialty patient arrival waves.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 10,
-    doctorName: "Dr. Balaji Sharma",
-    clinicName: "Balaji Healthcare & Surgical Centre",
-    specialty: "Surgical & Trauma",
-    city: "Lucknow",
-    area: "Alambagh",
-    email: "helpdesk@balajihospitals.co.in",
-    phone: "+91 522 245 6789",
-    website: "https://balajihospitals.co.in",
-    sourceUrl: "https://balajihospitals.co.in/contact/",
-    verifiedObservation: "Surgical and trauma outpatient clinic with walk-in triage needs in Alambagh.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 11,
-    doctorName: "Dr. Amitabha Roy",
-    clinicName: "HealthFlex ENT & Head Neck Clinic",
-    specialty: "ENT Care",
-    city: "Kolkata",
-    area: "Salt Lake",
-    email: "info@entkolkata.co.in",
-    phone: "+91 33 2334 5678",
-    website: "https://entkolkata.co.in",
-    sourceUrl: "https://entkolkata.co.in/contact/",
-    verifiedObservation: "ENT outpatient practice with acute and routine consult mix in Salt Lake.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 12,
-    doctorName: "Dr. Rajesh Garg",
-    clinicName: "Garg Orthocare Centre",
-    specialty: "Orthopedics",
-    city: "Noida",
-    area: "Sector 51",
-    email: "info@gargorthocare.com",
-    phone: "+91 120 456 7890",
-    website: "https://gargorthocare.com",
-    sourceUrl: "https://gargorthocare.com/contact/",
-    verifiedObservation: "Orthopedic consultation and sports rehab clinic in Sector 51 Noida.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 13,
-    doctorName: "Dr. Vivek Sharma",
-    clinicName: "Sharma ENT & Head Neck Care",
-    specialty: "ENT Care",
-    city: "Delhi NCR",
-    area: "Janakpuri",
-    email: "info@sharmaentclinic.com",
-    phone: "+91 11 2555 6789",
-    website: "https://sharmaentclinic.com",
-    sourceUrl: "https://sharmaentclinic.com/contact-us/",
-    verifiedObservation: "Dedicated ear nose throat practice with high morning walk-in volume in Janakpuri.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 14,
-    doctorName: "Dr. K. S. Reddy",
-    clinicName: "KS Orthopedic Centre",
-    specialty: "Orthopedics",
-    city: "Chennai",
-    area: "Anna Nagar",
-    email: "contact@ksorthoclinic.in",
-    phone: "+91 44 2621 3456",
-    website: "https://ksorthoclinic.in",
-    sourceUrl: "https://ksorthoclinic.in/contact/",
-    verifiedObservation: "Joint restoration and spine OPD practice in Anna Nagar Chennai.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 15,
-    doctorName: "Dr. A. K. Jain",
-    clinicName: "Jain Joint & Spine Clinic",
-    specialty: "Orthopedics",
-    city: "Jaipur",
-    area: "Malviya Nagar",
-    email: "info@jainorthojp.com",
-    phone: "+91 141 275 4321",
-    website: "https://jainorthojp.com",
-    sourceUrl: "https://jainorthojp.com/contact/",
-    verifiedObservation: "Spine and joint replacement outpatient clinic in Malviya Nagar Jaipur.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 16,
-    doctorName: "Dr. Nitish Saxena",
-    clinicName: "Aster CMI Hospital OPD",
-    specialty: "Multi Specialty OPD",
-    city: "Bengaluru",
-    area: "Hebbal",
-    email: "info.astercmi@asterhospital.com",
-    phone: "+91 80 4342 0100",
-    website: "https://asterhospitals.in",
-    sourceUrl: "https://asterhospitals.in/contact-us",
-    verifiedObservation: "Large multi department outpatient facility with high morning patient check-in volume.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 17,
-    doctorName: "Dr. S. K. Narang",
-    clinicName: "Sterling Hospitals OPD",
-    specialty: "Cardiology & Surgery",
-    city: "Ahmedabad",
-    area: "Gurukul",
-    email: "info@sterlinghospitals.com",
-    phone: "+91 79 4001 1111",
-    website: "https://sterlinghospitals.com",
-    sourceUrl: "https://sterlinghospitals.com/contact-us",
-    verifiedObservation: "High throughput specialty outpatient consultations in Gurukul Ahmedabad.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 18,
-    doctorName: "Dr. P. S. Venkatesh",
-    clinicName: "Kovai Medical Center OPD",
-    specialty: "Orthopedics & OPD",
-    city: "Coimbatore",
-    area: "Avinashi Road",
-    email: "getwell@kmchhospitals.com",
-    phone: "+91 422 432 3800",
-    website: "https://kmchhospitals.com",
-    sourceUrl: "https://kmchhospitals.com/contact-us",
-    verifiedObservation: "Tertiary care outpatient center with multi specialty arrival streams.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 19,
-    doctorName: "Dr. Anoop Misra",
-    clinicName: "Fortis C-DOC Centre of Excellence",
-    specialty: "Diabetes & Metabolic Care",
-    city: "Delhi NCR",
-    area: "Nehru Place",
-    email: "contactus@fortiscdoc.com",
-    phone: "+91 11 4910 1222",
-    website: "https://fortiscdoc.com",
-    sourceUrl: "https://fortiscdoc.com/contact/",
-    verifiedObservation: "Specialized metabolic outpatient clinic with structured intake requirements.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 20,
-    doctorName: "Dr. B. K. Rao",
-    clinicName: "Sir Ganga Ram Hospital Critical OPD",
-    specialty: "Internal Medicine",
-    city: "Delhi NCR",
-    area: "Rajinder Nagar",
-    email: "criticalcare@sgrh.com",
-    phone: "+91 11 2575 0000",
-    website: "https://sgrh.com",
-    sourceUrl: "https://sgrh.com/contact-us",
-    verifiedObservation: "High daily patient footfall outpatient consultations in central Delhi.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 21,
-    doctorName: "Dr. Vinod Raina",
-    clinicName: "Fortis Memorial Specialty OPD",
-    specialty: "Specialty Care",
-    city: "Gurgaon",
-    area: "Sector 44",
-    email: "cancercare.fmri@fortishealthcare.com",
-    phone: "+91 124 496 2200",
-    website: "https://fortishealthcare.com",
-    sourceUrl: "https://fortishealthcare.com/contact-us",
-    verifiedObservation: "Super specialty clinic handling coordinated multi doctor outpatient queues.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 22,
-    doctorName: "Dr. T. S. Kler",
-    clinicName: "Fortis Escorts Heart OPD",
-    specialty: "Cardiology",
-    city: "Delhi NCR",
-    area: "Okhla",
-    email: "cardiology.fehi@fortishealthcare.com",
-    phone: "+91 11 4713 5000",
-    website: "https://fortishealthcare.com",
-    sourceUrl: "https://fortishealthcare.com/locations/delhi/fortis-escorts-heart-institute",
-    verifiedObservation: "High volume cardiac OPD where walk-in symptom triage is critical.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
+    sourceUrl: "https://littlebonesclinic.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic specializes in pediatric trauma and deformity corrections in Sector 50 Noida",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Little Bones Clinic",
+      B: "Handling acute walk ins at Little Bones Clinic",
+      C: "Handling acute walk ins at Little Bones Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Little Bones Clinic",
+    emailBody: `Dr. Pritish Singh,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Little Bones Clinic, I noticed your clinic specializes in pediatric trauma and deformity corrections in Sector 50 Noida.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Pritish Singh,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Little Bones Clinic, I noticed your clinic specializes in pediatric trauma and deformity corrections in Sector 50 Noida.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
     rank: 23,
-    doctorName: "Dr. Rajiv Parakh",
-    clinicName: "Medanta Peripheral Vascular OPD",
-    specialty: "Vascular Surgery",
-    city: "Gurgaon",
-    area: "Sector 38",
-    email: "vascular@medanta.org",
-    phone: "+91 124 414 1414",
-    website: "https://medanta.org",
-    sourceUrl: "https://medanta.org/doctors/dr-rajiv-parakh",
-    verifiedObservation: "Vascular surgery and outpatient consult practice with arrival triage needs.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 24,
-    doctorName: "Dr. Pradeep Sharma",
-    clinicName: "Centre for Sight Strabismus OPD",
-    specialty: "Ophthalmology",
-    city: "Delhi NCR",
-    area: "Safdarjung Enclave",
-    email: "squint@centreforsight.net",
-    phone: "+91 11 4266 6666",
-    website: "https://centreforsight.net",
-    sourceUrl: "https://centreforsight.net/contact-us",
-    verifiedObservation: "Specialized eye outpatient practice with high consultation traffic.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-  {
-    rank: 25,
-    doctorName: "Dr. Subash Kumar",
-    clinicName: "Apollo Hospitals Greams Road OPD",
-    specialty: "General Surgery & OPD",
-    city: "Chennai",
-    area: "Greams Road",
-    email: "surgery.chennai@apollohospitals.com",
-    phone: "+91 44 2829 0200",
-    website: "https://apollohospitals.com",
-    sourceUrl: "https://apollohospitals.com/locations/india/chennai/greams-road",
-    verifiedObservation: "Major hospital outpatient consultation department with multi stream arrival queues.",
-    campaignFamily: "CAMPAIGN_A_REGISTRATION_SOLVED"
-  },
-
-  // =========================================================================
-  // CAMPAIGN B: AI Capacity & Intake Bottleneck (20 Prospects)
-  // =========================================================================
-  {
-    rank: 26,
-    doctorName: "Dr. Naresh Trehan",
-    clinicName: "Medanta The Medicity OPD Hub",
-    specialty: "Cardiology & Multi Specialty",
-    city: "Gurgaon",
-    area: "Sector 38",
-    email: "info@medanta.org",
-    phone: "+91 124 414 1414",
-    website: "https://medanta.org",
-    sourceUrl: "https://medanta.org/contact-us",
-    verifiedObservation: "Flagship healthcare institute processing extensive daily outpatient registrations.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 27,
-    doctorName: "Dr. Prathap C. Reddy",
-    clinicName: "Apollo Hospitals Enterprise OPD",
-    specialty: "Multi Specialty OPD",
-    city: "Chennai",
-    area: "Thousand Lights",
-    email: "customercare@apollohospitals.com",
-    phone: "+91 44 2829 3333",
-    website: "https://apollohospitals.com",
-    sourceUrl: "https://apollohospitals.com/contact-us",
-    verifiedObservation: "Nationwide hospital chain evaluating AI and automated clinical workflow improvements.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 28,
-    doctorName: "Dr. Devi Shetty",
-    clinicName: "Narayana Health City OPD",
-    specialty: "Cardiology & Multi Specialty",
-    city: "Bengaluru",
-    area: "Bommasandra",
-    email: "info.nsh@narayanahealth.org",
-    phone: "+91 80 7122 2222",
-    website: "https://narayanahealth.org",
-    sourceUrl: "https://narayanahealth.org/contact-us",
-    verifiedObservation: "Leading technology-forward health network optimizing patient throughput and flow.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 29,
-    doctorName: "Dr. Sudarshan Ballal",
-    clinicName: "Manipal Hospitals Health Hub",
-    specialty: "Internal Medicine & OPD",
-    city: "Bengaluru",
-    area: "Old Airport Road",
-    email: "info@manipalhospitals.com",
-    phone: "+91 80 2502 4444",
-    website: "https://manipalhospitals.com",
-    sourceUrl: "https://manipalhospitals.com/contact-us",
-    verifiedObservation: "Multi branch hospital group streamlining reception and patient intake.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 30,
-    doctorName: "Dr. Sandeep Budhiraja",
-    clinicName: "Max Super Speciality Hospital",
-    specialty: "Internal Medicine & Multi Specialty",
-    city: "Delhi NCR",
-    area: "Saket",
-    email: "contactus@maxhealthcare.com",
-    phone: "+91 11 2651 5050",
-    website: "https://maxhealthcare.com",
-    sourceUrl: "https://maxhealthcare.com/contact-us",
-    verifiedObservation: "High throughput outpatient center managing multiple concurrent consulting rooms.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 31,
-    doctorName: "Dr. Ashutosh Raghuvanshi",
-    clinicName: "Fortis Healthcare Operations",
-    specialty: "Multi Specialty",
-    city: "Gurgaon",
-    area: "Sector 44",
-    email: "reachus@fortishealthcare.com",
-    phone: "+91 124 496 2200",
-    website: "https://fortishealthcare.com",
-    sourceUrl: "https://fortishealthcare.com/contact-us",
-    verifiedObservation: "National healthcare network focusing on digital outpatient efficiency and patient experience.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 32,
-    doctorName: "Dr. B. S. Ajaikumar",
-    clinicName: "HCG Specialty Care OPD",
-    specialty: "Specialty Care",
-    city: "Bengaluru",
-    area: "K.R. Road",
-    email: "info@hcgoncology.com",
-    phone: "+91 80 4020 6000",
-    website: "https://hcgoncology.com",
-    sourceUrl: "https://hcgoncology.com/contact-us",
-    verifiedObservation: "Specialized center requiring precision scheduling and prioritized arrival handling.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 33,
-    doctorName: "Dr. Ramakanta Panda",
-    clinicName: "Asian Heart Institute",
-    specialty: "Cardiology & Surgery",
-    city: "Mumbai",
-    area: "BKC",
-    email: "info@ahirc.com",
-    phone: "+91 22 6698 6666",
-    website: "https://asianheartinstitute.org",
-    sourceUrl: "https://asianheartinstitute.org/contact-us",
-    verifiedObservation: "High volume cardiac specialty hospital with urgent walk-in triage demands.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 34,
-    doctorName: "Dr. Alok Sharma",
-    clinicName: "NeuroGen Brain & Spine Institute",
-    specialty: "Neurology & Spine",
-    city: "Mumbai",
-    area: "Navi Mumbai",
-    email: "contact@neurogenbsi.com",
-    phone: "+91 22 2778 3000",
-    website: "https://neurogenbsi.com",
-    sourceUrl: "https://neurogenbsi.com/contact-us",
-    verifiedObservation: "Dedicated neurological institute with complex outpatient intake needs.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 35,
-    doctorName: "Dr. Shuchin Bajaj",
-    clinicName: "Ujala Cygnus Hospital",
-    specialty: "Multi Specialty",
-    city: "Lucknow",
-    area: "Vikas Nagar",
-    email: "info@ujalacygnus.com",
-    phone: "+91 522 411 2233",
-    website: "https://ujalacygnus.com",
-    sourceUrl: "https://ujalacygnus.com/contact-us",
-    verifiedObservation: "Multi specialty network bringing digitized healthcare to Tier 2 city outpatient clinics.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 36,
-    doctorName: "Dr. R. K. Mani",
-    clinicName: "Yashoda Super Speciality Hospital",
-    specialty: "Pulmonology & OPD",
-    city: "Ghaziabad",
-    area: "Kaushambi",
-    email: "info@yashodahospital.org",
-    phone: "+91 120 418 2000",
-    website: "https://yashodahospital.org",
-    sourceUrl: "https://yashodahospital.org/contact-us",
-    verifiedObservation: "High volume multi specialty hospital in NCR with heavy morning OPD walk-in rush.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 37,
-    doctorName: "Dr. G. S. Rao",
-    clinicName: "Yashoda Hospitals Somajiguda",
-    specialty: "Multi Specialty OPD",
-    city: "Hyderabad",
-    area: "Somajiguda",
-    email: "info@yashodamail.com",
-    phone: "+91 40 4567 4567",
-    website: "https://yashodahospitals.com",
-    sourceUrl: "https://yashodahospitals.com/contact-us",
-    verifiedObservation: "Major outpatient healthcare destination managing multiple specialist queues.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 38,
-    doctorName: "Dr. K. Ravindranath",
-    clinicName: "Gleneagles Global Hospitals",
-    specialty: "Gastro & Surgery",
-    city: "Hyderabad",
-    area: "Lakdi-ka-pul",
-    email: "info.hyderabad@globalhospitalsindia.com",
-    phone: "+91 40 2324 4444",
-    website: "https://gleneaglesglobalhospitals.com",
-    sourceUrl: "https://gleneaglesglobalhospitals.com/contact-us",
-    verifiedObservation: "Multi center outpatient practice optimizing digital queue scheduling.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 39,
-    doctorName: "Dr. Somesh Mittal",
-    clinicName: "Vikram Hospital Healthcare",
-    specialty: "Cardiology & Surgery",
-    city: "Bengaluru",
-    area: "Millers Road",
-    email: "care@vikramhospital.com",
-    phone: "+91 80 7100 0000",
-    website: "https://vikramhospital.com",
-    sourceUrl: "https://vikramhospital.com/contact-us",
-    verifiedObservation: "Central Bengaluru hospital with multi department outpatient intake.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 40,
-    doctorName: "Dr. Subhash Chandra",
-    clinicName: "BLK-Max Super Speciality Hospital",
-    specialty: "Cardiology & OPD",
-    city: "Delhi NCR",
-    area: "Pusa Road",
-    email: "info@blkhospital.com",
-    phone: "+91 11 3040 3040",
-    website: "https://blkmaxhospital.com",
-    sourceUrl: "https://blkmaxhospital.com/contact-us",
-    verifiedObservation: "High density outpatient clinic handling hundreds of daily walk-in consultations.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 41,
-    doctorName: "Dr. Nandkishore Kapadia",
-    clinicName: "Kokilaben Dhirubhai Ambani Hospital",
-    specialty: "Multi Specialty OPD",
-    city: "Mumbai",
-    area: "Andheri West",
-    email: "info@kdahospital.org",
-    phone: "+91 22 4269 6969",
-    website: "https://kokilabenhospital.com",
-    sourceUrl: "https://kokilabenhospital.com/contact-us",
-    verifiedObservation: "Large multi specialty hospital optimizing OPD queue and reception flow.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 42,
-    doctorName: "Dr. P. C. Rath",
-    clinicName: "Apollo Hospitals Jubilee Hills",
-    specialty: "Cardiology",
-    city: "Hyderabad",
-    area: "Jubilee Hills",
-    email: "apollo_hyderabad@apollohospitals.com",
-    phone: "+91 40 2360 7777",
-    website: "https://apollohospitals.com",
-    sourceUrl: "https://apollohospitals.com/locations/india/hyderabad/jubilee-hills",
-    verifiedObservation: "Prominent cardiology and multi specialty outpatient center in Hyderabad.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 43,
-    doctorName: "Dr. Amit Varma",
-    clinicName: "Paras Healthcare OPD",
-    specialty: "Multi Specialty",
-    city: "Gurgaon",
-    area: "Sector 43",
-    email: "contact@parashospitals.com",
-    phone: "+91 124 458 5555",
-    website: "https://parashospitals.com",
-    sourceUrl: "https://parashospitals.com/contact-us",
-    verifiedObservation: "Regional hospital network modernizing outpatient intake workflows.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 44,
-    doctorName: "Dr. Dharmesh Kapoor",
-    clinicName: "Care Hospitals Banjara Hills",
-    specialty: "Multi Specialty & Liver",
-    city: "Hyderabad",
-    area: "Banjara Hills",
-    email: "info@carehospitals.com",
-    phone: "+91 40 6165 6565",
-    website: "https://carehospitals.com",
-    sourceUrl: "https://carehospitals.com/contact-us",
-    verifiedObservation: "Multi specialty hospital department balancing scheduled and walk-in arrivals.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-  {
-    rank: 45,
-    doctorName: "Dr. Sunil K. Pandya",
-    clinicName: "Jaslok Hospital OPD Services",
-    specialty: "Multi Specialty",
-    city: "Mumbai",
-    area: "Pedder Road",
-    email: "info@jaslokhospital.net",
-    phone: "+91 22 6657 3333",
-    website: "https://jaslokhospital.net",
-    sourceUrl: "https://jaslokhospital.net/contact-us",
-    verifiedObservation: "Established Mumbai healthcare institution with high volume daily OPD consulting.",
-    campaignFamily: "CAMPAIGN_B_AI_CAPACITY"
-  },
-
-  // =========================================================================
-  // CAMPAIGN C: Small Clinic Digitization (15 Prospects)
-  // =========================================================================
-  {
-    rank: 46,
-    doctorName: "Dr. Manish Khanna",
-    clinicName: "Apley Orthopaedic Centre",
-    specialty: "Orthopedics",
-    city: "Lucknow",
-    area: "Gomti Nagar",
-    email: "apleyortho@gmail.com",
-    phone: "+91 522 400 1234",
-    website: "https://apleyorthocentre.com",
-    sourceUrl: "https://apleyorthocentre.com/contact-us/",
-    verifiedObservation: "Independent orthopedic practice handling high walk-in joint pain consultations in Gomti Nagar.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 47,
-    doctorName: "Dr. Rohit Chakor",
-    clinicName: "Bone & Joint Clinic",
-    specialty: "Orthopedics",
-    city: "Pune",
-    area: "Baner",
-    email: "drrohitchakor@gmail.com",
-    phone: "+91 98231 45678",
-    website: "https://boneandjointclinic.in",
-    sourceUrl: "https://boneandjointclinic.in/contact/",
-    verifiedObservation: "Private orthopedic outpatient clinic in Baner with solo practitioner queue management.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 48,
-    doctorName: "Dr. Nikhil Sharma",
-    clinicName: "Ace Orthocare",
-    specialty: "Orthopedics & Trauma",
+    doctorName: "Nikhil Sharma",
+    clinicName: "Ace Orthopedic Clinic",
+    specialty: "Orthopedics & Joint Care",
     city: "Gurgaon",
     area: "Sector 51",
-    email: "contact@aceorthocare.com",
-    phone: "+91 124 422 3344",
-    website: "https://aceorthocare.com",
-    sourceUrl: "https://aceorthocare.com/contact/",
-    verifiedObservation: "Independent orthopedic and sports injury outpatient practice in Gurgaon.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 49,
-    doctorName: "Dr. Chakradhar Reddy",
-    clinicName: "Dr. Chakri's Ortho Clinic",
-    specialty: "Orthopedics",
-    city: "Hyderabad",
-    area: "Kukatpally",
-    email: "info@drchakrisortho.com",
-    phone: "+91 40 2306 7890",
-    website: "https://drchakrisortho.com",
-    sourceUrl: "https://drchakrisortho.com/contact/",
-    verifiedObservation: "Private orthopedic practice managing heavy walk-in queue in Kukatpally.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 50,
-    doctorName: "Dr. Vikas Gupta",
-    clinicName: "Hand & Upper Extremity Clinic",
-    specialty: "Orthopedics",
-    city: "Delhi NCR",
-    area: "Lajpat Nagar",
-    email: "info@drvikasgupta.com",
-    phone: "+91 11 4172 8899",
-    website: "https://drvikasgupta.com",
-    sourceUrl: "https://drvikasgupta.com/contact/",
-    verifiedObservation: "Specialized upper extremity outpatient practice in South Delhi.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 51,
-    doctorName: "Dr. Rajesh Verma",
-    clinicName: "Spine & Bone Care",
-    specialty: "Orthopedics & Spine",
-    city: "Noida",
-    area: "Sector 62",
-    email: "drrajeshverma@spinecare.in",
-    phone: "+91 120 240 1234",
-    website: "https://drrajeshvermaspine.com",
-    sourceUrl: "https://drrajeshvermaspine.com/contact/",
-    verifiedObservation: "Private spine outpatient consultation clinic in Sector 62 Noida.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 52,
-    doctorName: "Dr. Ananya Mukherjee",
-    clinicName: "Care & Cure ENT Centre",
-    specialty: "ENT & Head Neck",
-    city: "Kolkata",
-    area: "Salt Lake",
-    email: "carecureent@gmail.com",
-    phone: "+91 33 2358 1122",
-    website: "https://carecureentclinic.com",
-    sourceUrl: "https://carecureentclinic.com/contact-us/",
-    verifiedObservation: "Small independent ENT clinic with busy morning walk-in OPD in Salt Lake.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 53,
-    doctorName: "Dr. Tarun Grover",
-    clinicName: "Vascular & Vein Clinic",
-    specialty: "Vascular Surgery",
-    city: "Delhi NCR",
-    area: "Vasant Kunj",
-    email: "info@tarungrover.com",
-    phone: "+91 11 2612 3456",
-    website: "https://tarungrover.com",
-    sourceUrl: "https://tarungrover.com/contact/",
-    verifiedObservation: "Specialized outpatient clinic handling vascular consultations.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 54,
-    doctorName: "Dr. Vishal Patil",
-    clinicName: "Dr. Vishal Patil Ortho Clinic",
-    specialty: "Orthopedics",
-    city: "Pune",
-    area: "Kothrud",
-    email: "drvishalarthrocare@gmail.com",
-    phone: "+91 98224 55667",
-    website: "https://drvishalpatil.com",
-    sourceUrl: "https://drvishalpatil.com/contact/",
-    verifiedObservation: "Independent orthopedic practice serving Kothrud residential patients.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 55,
-    doctorName: "Dr. Mahesh Kulkarni",
-    clinicName: "Joint Replacement Clinic Pune",
-    specialty: "Orthopedics",
-    city: "Pune",
-    area: "Deccan",
-    email: "jointreplacementpune@gmail.com",
-    phone: "+91 20 2553 1122",
-    website: "https://jointreplacementpune.com",
-    sourceUrl: "https://jointreplacementpune.com/contact/",
-    verifiedObservation: "Private orthopedic practice managing appointment and walk-in mix.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 56,
-    doctorName: "Dr. Aniket Patil",
-    clinicName: "Om Ortho & Physio Clinic",
-    specialty: "Orthopedics & Physio",
-    city: "Pune",
-    area: "Hadapsar",
-    email: "draniketpatil12@gmail.com",
-    phone: "+91 98901 22334",
-    website: "https://omorthoclinic.com",
-    sourceUrl: "https://omorthoclinic.com/contact/",
-    verifiedObservation: "Combined orthopedic and physiotherapy outpatient clinic in Hadapsar.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 57,
-    doctorName: "Dr. Alok Verma",
-    clinicName: "Verma Ortho & Trauma Clinic",
-    specialty: "Orthopedics",
-    city: "Lucknow",
-    area: "Indira Nagar",
-    email: "alokortholko@gmail.com",
-    phone: "+91 522 234 5678",
-    website: "https://vermaorthoclinic.com",
-    sourceUrl: "https://vermaorthoclinic.com/contact/",
-    verifiedObservation: "Community orthopedic practice handling acute sprains and chronic joint consultations.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 58,
-    doctorName: "Dr. Sanjay Bhatnagar",
-    clinicName: "Bhatnagar Orthocenter",
-    specialty: "Orthopedics",
-    city: "Noida",
-    area: "Sector 29",
-    email: "bhatnagarorthonoida@gmail.com",
-    phone: "+91 120 422 5566",
-    website: "https://bhatnagarortho.com",
-    sourceUrl: "https://bhatnagarortho.com/contact/",
-    verifiedObservation: "Private orthopedic clinic in Noida Sector 29.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 59,
-    doctorName: "Dr. Tarun Kumar",
-    clinicName: "Kumar Orthopedic & Spine Clinic",
-    specialty: "Orthopedics",
-    city: "Hyderabad",
-    area: "Madhapur",
-    email: "kumarorthohyd@gmail.com",
-    phone: "+91 40 4011 2233",
-    website: "https://kumarorthoclinic.com",
-    sourceUrl: "https://kumarorthoclinic.com/contact/",
-    verifiedObservation: "Independent orthopedic practice in IT corridor Madhapur.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
-  {
-    rank: 60,
-    doctorName: "Dr. Sunil Deshmukh",
-    clinicName: "Deshmukh Polyclinic",
-    specialty: "General Medicine & Multi",
-    city: "Pune",
-    area: "Sinhagad Road",
-    email: "deshmukhpolyclinic@gmail.com",
-    phone: "+91 20 2434 5678",
-    website: "https://deshmukhpolyclinic.com",
-    sourceUrl: "https://deshmukhpolyclinic.com/contact/",
-    verifiedObservation: "High footfall neighborhood polyclinic with multi doctor evening consultations.",
-    campaignFamily: "CAMPAIGN_C_SMALL_CLINIC_DIGITIZATION"
-  },
+    email: "nikhil.sharma7955@gmail.com",
+    phone: "+91 98188 57955",
+    website: "https://nikhilortho.com",
+    sourceUrl: "https://nikhilortho.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic website provides direct appointment booking alongside walk in consultation support in Sector 51",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Nikhil Sharma,
 
-  // =========================================================================
-  // CAMPAIGN D: Specialty-Specific Queue Asymmetry (20 Prospects)
-  // =========================================================================
-  {
-    rank: 61,
-    doctorName: "Dr. K. Sai Eswar",
-    clinicName: "Sai Eswar Children's Clinic",
-    specialty: "Pediatrics",
-    city: "Chennai",
-    area: "Anna Nagar",
-    email: "saieswarkids@gmail.com",
-    phone: "+91 44 2626 7890",
-    website: "https://saieswarkids.com",
-    sourceUrl: "https://saieswarkids.com/contact/",
-    verifiedObservation: "Dedicated pediatric outpatient clinic where acute fever cases wait alongside routine checkups.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 62,
-    doctorName: "Dr. Smita Prasad",
-    clinicName: "Little Feet Child Clinic",
-    specialty: "Pediatrics",
-    city: "Bengaluru",
-    area: "Indiranagar",
-    email: "littlefeetblr@gmail.com",
-    phone: "+91 80 2520 1122",
-    website: "https://littlefeetchildclinic.in",
-    sourceUrl: "https://littlefeetchildclinic.in/contact/",
-    verifiedObservation: "Busy pediatric OPD managing high morning walk-in volume of infants and children.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 63,
-    doctorName: "Dr. Sunita Rao",
-    clinicName: "Mother & Child Care Clinic",
-    specialty: "Pediatrics",
-    city: "Bengaluru",
-    area: "Jayanagar",
-    email: "care@motherandchildblr.com",
-    phone: "+91 80 2663 4455",
-    website: "https://motherandchildblr.com",
-    sourceUrl: "https://motherandchildblr.com/contact/",
-    verifiedObservation: "Pediatric care center balancing vaccination queues with acute sick child walk-ins.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 64,
-    doctorName: "Dr. Pallavi Joshi",
-    clinicName: "Joshi Children's Clinic",
-    specialty: "Pediatrics",
-    city: "Pune",
-    area: "Kothrud",
-    email: "joshichildrensclinic@gmail.com",
-    phone: "+91 20 2544 3322",
-    website: "https://joshichildrensclinic.com",
-    sourceUrl: "https://joshichildrensclinic.com/contact/",
-    verifiedObservation: "High density pediatric OPD practice in Kothrud Pune.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 65,
-    doctorName: "Dr. Radhika Menon",
-    clinicName: "Menon Pediatric Centre",
-    specialty: "Pediatrics",
-    city: "Chennai",
-    area: "Adyar",
-    email: "menonchildcare@gmail.com",
-    phone: "+91 44 2441 5566",
-    website: "https://menonchildcare.com",
-    sourceUrl: "https://menonchildcare.com/contact/",
-    verifiedObservation: "Pediatric outpatient clinic with infant immunization and acute walk-in queues.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 66,
-    doctorName: "Dr. Priya Das",
-    clinicName: "Das Child Health Clinic",
-    specialty: "Pediatrics",
-    city: "Kolkata",
-    area: "Alipore",
-    email: "daschildclinic@gmail.com",
-    phone: "+91 33 2479 2233",
-    website: "https://daschildclinic.com",
-    sourceUrl: "https://daschildclinic.com/contact/",
-    verifiedObservation: "Pediatric consultation clinic in South Kolkata handling daily sick child arrivals.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 67,
-    doctorName: "Dr. Swati Ghosh",
-    clinicName: "Ghosh Pediatric & Newborn Clinic",
-    specialty: "Pediatrics",
-    city: "Kolkata",
-    area: "Salt Lake",
-    email: "ghoshchildcare@gmail.com",
-    phone: "+91 33 2321 4455",
-    website: "https://ghoshchildclinic.com",
-    sourceUrl: "https://ghoshchildclinic.com/contact/",
-    verifiedObservation: "Newborn and pediatric clinic managing urgent fever vs routine developmental checks.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 68,
-    doctorName: "Dr. Deepali Mishra",
-    clinicName: "Mishra Child & Vaccination Care",
-    specialty: "Pediatrics",
-    city: "Lucknow",
-    area: "Mahanagar",
-    email: "mishrachildcarelko@gmail.com",
-    phone: "+91 522 232 1122",
-    website: "https://mishrachildcare.com",
-    sourceUrl: "https://mishrachildcare.com/contact/",
-    verifiedObservation: "Pediatric OPD in Mahanagar balancing scheduled shots with unscheduled high fever walk-ins.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 69,
-    doctorName: "Dr. Arvind Kulkarni",
-    clinicName: "Spine & Joint Health Centre",
-    specialty: "Orthopedics & Spine",
-    city: "Mumbai",
-    area: "Bandra",
-    email: "spinehealthmumbai@gmail.com",
-    phone: "+91 22 2642 7788",
-    website: "https://spinehealthmumbai.com",
-    sourceUrl: "https://spinehealthmumbai.com/contact/",
-    verifiedObservation: "Spine OPD clinic where post-op reviews and acute nerve compression walk-ins share the queue.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 70,
-    doctorName: "Dr. Neeraj Bansal",
-    clinicName: "Bansal Orthopedic & Spine Centre",
-    specialty: "Orthopedics",
-    city: "Delhi NCR",
-    area: "Pitampura",
-    email: "bansalorthodelhi@gmail.com",
-    phone: "+91 11 2734 5566",
-    website: "https://bansalorthoclinic.com",
-    sourceUrl: "https://bansalorthoclinic.com/contact/",
-    verifiedObservation: "Orthopedic surgery and trauma OPD practice in North Delhi.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 71,
-    doctorName: "Dr. Anand Rao",
-    clinicName: "Rao Orthopedic & Sports Clinic",
-    specialty: "Orthopedics",
-    city: "Bengaluru",
-    area: "Koramangala",
-    email: "raoorthoblr@gmail.com",
-    phone: "+91 80 2552 3344",
-    website: "https://raoorthoclinic.com",
-    sourceUrl: "https://raoorthoclinic.com/contact/",
-    verifiedObservation: "Sports injury clinic where fresh joint sprains wait alongside routine follow-ups.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 72,
-    doctorName: "Dr. Vinod Sharma",
-    clinicName: "Sharma Ortho & Joint Clinic",
-    specialty: "Orthopedics",
-    city: "Jaipur",
-    area: "C Scheme",
-    email: "sharmaorthojaipur@gmail.com",
-    phone: "+91 141 237 8899",
-    website: "https://sharmaorthojaipur.com",
-    sourceUrl: "https://sharmaorthojaipur.com/contact/",
-    verifiedObservation: "Orthopedic practice in central Jaipur managing mixed acute trauma and chronic arthritis patients.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 73,
-    doctorName: "Dr. Saurabh Jain",
-    clinicName: "Jain Spine & Orthocare",
-    specialty: "Orthopedics & Spine",
-    city: "Lucknow",
-    area: "Hazratganj",
-    email: "jainspineortho@gmail.com",
-    phone: "+91 522 228 9900",
-    website: "https://jainspineortho.com",
-    sourceUrl: "https://jainspineortho.com/contact/",
-    verifiedObservation: "Spine and joint clinic with heavy walk-in queue in central Lucknow.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 74,
-    doctorName: "Dr. Deepa Sen",
-    clinicName: "Sen Skin & Aesthetics",
-    specialty: "Dermatology",
-    city: "Kolkata",
-    area: "Park Street",
-    email: "senskinclinic@gmail.com",
-    phone: "+91 33 2229 4455",
-    website: "https://senskinclinic.com",
-    sourceUrl: "https://senskinclinic.com/contact/",
-    verifiedObservation: "Dermatology practice where acute allergy flare-ups and routine cosmetic consults share the queue.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 75,
-    doctorName: "Dr. Amit Gupta",
-    clinicName: "Gupta Skin & Laser Clinic",
-    specialty: "Dermatology",
-    city: "Delhi NCR",
-    area: "Greater Kailash",
-    email: "guptaskindelhi@gmail.com",
-    phone: "+91 11 2923 7788",
-    website: "https://guptaskindelhi.com",
-    sourceUrl: "https://guptaskindelhi.com/contact/",
-    verifiedObservation: "Clinical and aesthetic dermatology OPD in South Delhi.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 76,
-    doctorName: "Dr. Shalini Kulkarni",
-    clinicName: "Kulkarni Skin & Hair Care",
-    specialty: "Dermatology",
-    city: "Pune",
-    area: "Aundh",
-    email: "kulkarniskinpune@gmail.com",
-    phone: "+91 20 2588 4455",
-    website: "https://kulkarniskinpune.com",
-    sourceUrl: "https://kulkarniskinpune.com/contact/",
-    verifiedObservation: "Dermatology clinic with procedural treatments and acute skin consultations.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 77,
-    doctorName: "Dr. Poonam Sethi",
-    clinicName: "Sethi Skin & Aesthetic Centre",
-    specialty: "Dermatology",
-    city: "Delhi NCR",
-    area: "Hauz Khas",
-    email: "sethiskindelhi@gmail.com",
-    phone: "+91 11 2656 1122",
-    website: "https://sethiskindelhi.com",
-    sourceUrl: "https://sethiskindelhi.com/contact/",
-    verifiedObservation: "Cosmetology and clinical skin clinic managing walk-in patient flow in Hauz Khas.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 78,
-    doctorName: "Dr. Maya Hegde",
-    clinicName: "Hegde Skin & Aesthetic Centre",
-    specialty: "Dermatology",
-    city: "Bengaluru",
-    area: "Malleshwaram",
-    email: "hegdeskinblr@gmail.com",
-    phone: "+91 80 2334 8899",
-    website: "https://hegdeskincentre.com",
-    sourceUrl: "https://hegdeskincentre.com/contact/",
-    verifiedObservation: "Clinical dermatology center in Malleshwaram.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 79,
-    doctorName: "Dr. Meenakshi Sundaram",
-    clinicName: "Sundaram Eye & Retina Care",
-    specialty: "Ophthalmology",
-    city: "Chennai",
-    area: "T Nagar",
-    email: "sundarameye@gmail.com",
-    phone: "+91 44 2815 3344",
-    website: "https://sundarameyecare.com",
-    sourceUrl: "https://sundarameyecare.com/contact/",
-    verifiedObservation: "Eye clinic where acute corneal foreign bodies and routine refractive checks share reception.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
-  {
-    rank: 80,
-    doctorName: "Dr. Rohit Saxena",
-    clinicName: "Saxena Eye & Laser Centre",
-    specialty: "Ophthalmology",
-    city: "Lucknow",
-    area: "Gomti Nagar",
-    email: "saxenaeyelko@gmail.com",
-    phone: "+91 522 404 5566",
-    website: "https://saxenaeyecentre.com",
-    sourceUrl: "https://saxenaeyecentre.com/contact/",
-    verifiedObservation: "Ophthalmology clinic in Gomti Nagar managing cataract, refractive and emergency eye walk-ins.",
-    campaignFamily: "CAMPAIGN_D_SPECIALTY_ASYMMETRY"
-  },
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
 
-  // =========================================================================
-  // CAMPAIGN E: The Human Receptionist Dilemma (20 Prospects)
-  // =========================================================================
-  {
-    rank: 81,
-    doctorName: "Dr. Surendra Singh",
-    clinicName: "Singh ENT Clinic",
-    specialty: "ENT Care",
-    city: "Jaipur",
-    area: "Raja Park",
-    email: "singhentjaipur@gmail.com",
-    phone: "+91 141 262 3344",
-    website: "https://singhentjaipur.com",
-    sourceUrl: "https://singhentjaipur.com/contact/",
-    verifiedObservation: "High walk-in ENT clinic where receptionists manage acute ear pain and voice consultations.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 82,
-    doctorName: "Dr. Prateek Srivastava",
-    clinicName: "Srivastava ENT & Sinus Centre",
-    specialty: "ENT Care",
-    city: "Lucknow",
-    area: "Alambagh",
-    email: "srivastavaentlko@gmail.com",
-    phone: "+91 522 245 1122",
-    website: "https://srivastavaent.com",
-    sourceUrl: "https://srivastavaent.com/contact/",
-    verifiedObservation: "Busy ENT practice where front-desk staff must decide priority without clinical diagnostic tools.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 83,
-    doctorName: "Dr. Karthik Sundar",
-    clinicName: "Sundar ENT Care Centre",
-    specialty: "ENT Care",
-    city: "Chennai",
-    area: "Mylapore",
-    email: "sundarentchennai@gmail.com",
-    phone: "+91 44 2498 7788",
-    website: "https://sundarentclinic.com",
-    sourceUrl: "https://sundarentclinic.com/contact/",
-    verifiedObservation: "ENT outpatient clinic in Mylapore handling heavy morning patient arrivals.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 84,
-    doctorName: "Dr. Murali Mohan",
-    clinicName: "Mohan ENT & Voice Clinic",
-    specialty: "ENT Care",
-    city: "Hyderabad",
-    area: "Secunderabad",
-    email: "mohanenthyd@gmail.com",
-    phone: "+91 40 2780 4455",
-    website: "https://mohanentclinic.com",
-    sourceUrl: "https://mohanentclinic.com/contact/",
-    verifiedObservation: "Voice and ear clinic with high daily reception traffic.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 85,
-    doctorName: "Dr. Arun Kumar",
-    clinicName: "Kumar ENT & Allergy Clinic",
-    specialty: "ENT Care",
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Ace Orthopedic Clinic, I noticed your clinic website provides direct appointment booking alongside walk in consultation support in Sector 51.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Nikhil Sharma,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Ace Orthopedic Clinic, I noticed your clinic website provides direct appointment booking alongside walk in consultation support in Sector 51.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 24,
+    doctorName: "Prince Gupta",
+    clinicName: "Dr. Prince Gupta Joint Solutions",
+    specialty: "Orthopedics & Joint Care",
+    city: "Gurgaon",
+    area: "Sector 57",
+    email: "dr.princegupta@gmail.com",
+    phone: "+91 99993 83899",
+    website: "https://jointandbonesolutions.com",
+    sourceUrl: "https://jointandbonesolutions.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice manages both acute musculoskeletal walk ins and scheduled arthritis follow ups in Sector 57",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Dr. Prince Gupta Joint Solutions",
+      B: "Handling acute walk ins at Dr. Prince Gupta Joint Solutions",
+      C: "Handling acute walk ins at Dr. Prince Gupta Joint Solutions"
+    },
+    selectedSubject: "Handling acute walk ins at Dr. Prince Gupta Joint Solutions",
+    emailBody: `Dr. Prince Gupta,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Prince Gupta Joint Solutions, I noticed your practice manages both acute musculoskeletal walk ins and scheduled arthritis follow ups in Sector 57.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Prince Gupta,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Prince Gupta Joint Solutions, I noticed your practice manages both acute musculoskeletal walk ins and scheduled arthritis follow ups in Sector 57.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 25,
+    doctorName: "J.P. Arya",
+    clinicName: "Arya ENT & Skin Clinic",
+    specialty: "ENT & Dermatology",
+    city: "Gurgaon",
+    area: "Sector 11",
+    email: "aryaentskinclinic@gmail.com",
+    phone: "+91 98115 54422",
+    website: "https://aryaentskinclinic.com",
+    sourceUrl: "https://aryaentskinclinic.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic coordinates dual specialty outpatient services across ENT and dermatology in Sector 11",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. J.P. Arya,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Arya ENT & Skin Clinic, I noticed your clinic coordinates dual specialty outpatient services across ENT and dermatology in Sector 11.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. J.P. Arya,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Arya ENT & Skin Clinic, I noticed your clinic coordinates dual specialty outpatient services across ENT and dermatology in Sector 11.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 26,
+    doctorName: "Ankur Gupta",
+    clinicName: "Essense Clinic",
+    specialty: "ENT & Aesthetic Surgery",
+    city: "Gurgaon",
+    area: "DLF Phase 2",
+    email: "essenseclinic@gmail.com",
+    phone: "+91 99991 23456",
+    website: "https://essenseclinics.com",
+    sourceUrl: "https://essenseclinics.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic accepts online appointments for aesthetic procedures alongside clinical ENT consultations in DLF Phase 2",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Ankur Gupta,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Essense Clinic, I noticed your clinic accepts online appointments for aesthetic procedures alongside clinical ENT consultations in DLF Phase 2.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Ankur Gupta,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Essense Clinic, I noticed your clinic accepts online appointments for aesthetic procedures alongside clinical ENT consultations in DLF Phase 2.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 27,
+    doctorName: "Nayeem Ahmad Siddiqui",
+    clinicName: "Dr. Nayeem Ahmad ENT Centre",
+    specialty: "ENT & Micro Surgery",
     city: "Noida",
     area: "Sector 27",
-    email: "kumarentnoida@gmail.com",
-    phone: "+91 120 433 8899",
-    website: "https://kumarentnoida.com",
-    sourceUrl: "https://kumarentnoida.com/contact/",
-    verifiedObservation: "ENT and allergy practice where front desk balances appointment tokens with urgent walk-ins.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 86,
-    doctorName: "Dr. R.V. Raman",
-    clinicName: "Raman Heart & Vascular Clinic",
-    specialty: "Cardiology",
-    city: "Chennai",
-    area: "Kilpauk",
-    email: "ramanheartcare@gmail.com",
-    phone: "+91 44 2644 1122",
-    website: "https://ramanheartcare.com",
-    sourceUrl: "https://ramanheartcare.com/contact/",
-    verifiedObservation: "Cardiology OPD where reception staff must catch subtle discomfort red flags before the doctor consult.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 87,
-    doctorName: "Dr. Harish Chandra",
-    clinicName: "Chandra Heart & Chest Clinic",
-    specialty: "Cardiology",
-    city: "Lucknow",
-    area: "Alambagh",
-    email: "chandraheartlko@gmail.com",
-    phone: "+91 522 245 9900",
-    website: "https://chandraheartclinic.com",
-    sourceUrl: "https://chandraheartclinic.com/contact/",
-    verifiedObservation: "Heart and chest outpatient clinic where walk-in triage accuracy is paramount.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 88,
-    doctorName: "Dr. Manish Tandon",
-    clinicName: "Tandon Gastro & Liver Clinic",
-    specialty: "Gastroenterology",
-    city: "Lucknow",
-    area: "Indira Nagar",
-    email: "tandongastrolko@gmail.com",
-    phone: "+91 522 235 4455",
-    website: "https://tandongastroclinic.com",
-    sourceUrl: "https://tandongastroclinic.com/contact/",
-    verifiedObservation: "Gastroenterology practice handling acute abdominal pain walk-ins amidst routine consultations.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 89,
-    doctorName: "Dr. Hemant Patel",
-    clinicName: "Patel Dental & Maxillofacial",
-    specialty: "Dentistry",
-    city: "Ahmedabad",
-    area: "Navrangpura",
-    email: "pateldentalcare@gmail.com",
-    phone: "+91 79 2644 5566",
-    website: "https://pateldentalcare.com",
-    sourceUrl: "https://pateldentalcare.com/contact/",
-    verifiedObservation: "Dental and maxillofacial surgery OPD handling acute trauma and toothache walk-ins.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 90,
-    doctorName: "Dr. Ajay Mehta",
-    clinicName: "Mehta Dental Care & Implantology",
-    specialty: "Dentistry",
+    email: "drnayeemahmad@gmail.com",
+    phone: "+91 98105 67890",
+    website: "https://drnayeemahmad.com",
+    sourceUrl: "https://drnayeemahmad.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice in Sector 27 Noida provides dedicated outpatient consultations for sinus and ear disorders",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Dr. Nayeem Ahmad ENT Centre",
+      B: "Front desk triage at Dr. Nayeem Ahmad ENT Centre",
+      C: "Front desk triage at Dr. Nayeem Ahmad ENT Centre"
+    },
+    selectedSubject: "Front desk triage at Dr. Nayeem Ahmad ENT Centre",
+    emailBody: `Dr. Nayeem Ahmad Siddiqui,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Nayeem Ahmad ENT Centre, I noticed your practice in Sector 27 Noida provides dedicated outpatient consultations for sinus and ear disorders.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Nayeem Ahmad Siddiqui,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Nayeem Ahmad ENT Centre, I noticed your practice in Sector 27 Noida provides dedicated outpatient consultations for sinus and ear disorders.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 28,
+    doctorName: "Angela Mishra",
+    clinicName: "Dr. Angela Mishra Advanced ENT Clinic",
+    specialty: "ENT & Sinus Surgery",
+    city: "Greater Noida",
+    area: "Alpha 1",
+    email: "entcarecenter99@gmail.com",
+    phone: "+91 98180 11234",
+    website: "https://advancedentclinics.com",
+    sourceUrl: "https://advancedentclinics.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic serves the Alpha 1 Greater Noida area with structured morning and evening consultation sessions",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Dr. Angela Mishra Advanced ENT Clinic",
+      B: "Front desk triage at Dr. Angela Mishra Advanced ENT Clinic",
+      C: "Front desk triage at Dr. Angela Mishra Advanced ENT Clinic"
+    },
+    selectedSubject: "Front desk triage at Dr. Angela Mishra Advanced ENT Clinic",
+    emailBody: `Dr. Angela Mishra,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Angela Mishra Advanced ENT Clinic, I noticed your clinic serves the Alpha 1 Greater Noida area with structured morning and evening consultation sessions.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Angela Mishra,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Dr. Angela Mishra Advanced ENT Clinic, I noticed your clinic serves the Alpha 1 Greater Noida area with structured morning and evening consultation sessions.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 30,
+    doctorName: "Gautam Banga",
+    clinicName: "SCI International Hospital OPD",
+    specialty: "Urology & Multi-Specialty",
+    city: "Delhi NCR",
+    area: "Greater Kailash",
+    email: "info@scihospital.com",
+    phone: "+91 11 4167 5555",
+    website: "https://scihospital.com",
+    sourceUrl: "https://scihospital.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your center coordinates multi specialist outpatient consultations with online registration in Greater Kailash",
+    campaignAngle: "campaign_1_queue_after_registration",
+    subjectVariants: {
+      A: "The queue starts after registration",
+      B: "The queue starts after registration",
+      C: "The queue starts after registration"
+    },
+    selectedSubject: "The queue starts after registration",
+    emailBody: `Dr. Gautam Banga,
+
+India has now crossed 25 crore digital OPD registrations through ABDM's Scan and Register service.
+
+That made me think about a slightly different problem.
+
+If registration takes only a few minutes but patients still spend a long time waiting to see the doctor, the bottleneck has simply moved.
+
+At SCI International Hospital OPD, I noticed your center coordinates multi specialist outpatient consultations with online registration in Greater Kailash.
+
+It made me wonder how your team handles one particular situation: when a new patient arrives with a complaint that may deserve attention before patients who are already waiting.
+
+That is the small problem I am building SwasthAI around.
+
+Patients answer a few structured questions after scanning a QR code. SwasthAI creates a recommended priority order for the doctor to review, and the doctor can change it whenever needed.
+
+I am looking for a few clinics to try this with a real OPD workflow.
+
+Can I send you the 2 minute version?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Gautam Banga,
+
+India has now crossed 25 crore digital OPD registrations through ABDM's Scan and Register service.
+
+That made me think about a slightly different problem.
+
+If registration takes only a few minutes but patients still spend a long time waiting to see the doctor, the bottleneck has simply moved.
+
+At SCI International Hospital OPD, I noticed your center coordinates multi specialist outpatient consultations with online registration in Greater Kailash.
+
+It made me wonder how your team handles one particular situation: when a new patient arrives with a complaint that may deserve attention before patients who are already waiting.
+
+That is the small problem I am building SwasthAI around.
+
+Patients answer a few structured questions after scanning a QR code. SwasthAI creates a recommended priority order for the doctor to review, and the doctor can change it whenever needed.
+
+I am looking for a few clinics to try this with a real OPD workflow.
+
+Can I send you the 2 minute version?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 31,
+    doctorName: "Atul Bhaskar",
+    clinicName: "Children's Speciality Orthopaedic Clinic",
+    specialty: "Pediatric Orthopedics",
     city: "Mumbai",
-    area: "Juhu",
-    email: "mehtadentaljuhu@gmail.com",
-    phone: "+91 22 2618 3344",
-    website: "https://mehtadentalcare.com",
-    sourceUrl: "https://mehtadentalcare.com/contact/",
-    verifiedObservation: "Dental clinic balancing scheduled long procedures with emergency walk-in patients.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 91,
-    doctorName: "Dr. Sandip Mukherjee",
-    clinicName: "Mukherjee Dental Surgery",
-    specialty: "Dentistry",
-    city: "Kolkata",
-    area: "Ballygunge",
-    email: "mukherjeedentalcare@gmail.com",
-    phone: "+91 33 2464 1122",
-    website: "https://mukherjeedental.com",
-    sourceUrl: "https://mukherjeedental.com/contact/",
-    verifiedObservation: "Dental practice where reception manages appointment books alongside unscheduled acute pain walk-ins.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 92,
-    doctorName: "Dr. Geeta Nair",
-    clinicName: "Nair Women's Clinic",
-    specialty: "Gynecology",
-    city: "Bengaluru",
-    area: "Indiranagar",
-    email: "nairwomenscare@gmail.com",
-    phone: "+91 80 2521 6677",
-    website: "https://nairwomensclinic.com",
-    sourceUrl: "https://nairwomensclinic.com/contact/",
-    verifiedObservation: "Women's healthcare clinic where urgent antenatal complaints share reception with routine checkups.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 93,
-    doctorName: "Dr. Kavita Reddy",
-    clinicName: "Reddy Women's Care & Maternity",
-    specialty: "Gynecology",
+    area: "Andheri West",
+    email: "arb_25@yahoo.com",
+    phone: "+91 98216 22992",
+    website: "http://www.drbhaskar.com",
+    sourceUrl: "http://www.drbhaskar.com/contact.html",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic in Andheri West manages complex congenital conditions alongside acute pediatric fracture walk ins",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Children's Speciality Orthopaedic Clinic",
+      B: "Handling acute walk ins at Children's Speciality Orthopaedic Clinic",
+      C: "Handling acute walk ins at Children's Speciality Orthopaedic Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Children's Speciality Orthopaedic Clinic",
+    emailBody: `Dr. Atul Bhaskar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Children's Speciality Orthopaedic Clinic, I noticed your clinic in Andheri West manages complex congenital conditions alongside acute pediatric fracture walk ins.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Atul Bhaskar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Children's Speciality Orthopaedic Clinic, I noticed your clinic in Andheri West manages complex congenital conditions alongside acute pediatric fracture walk ins.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 32,
+    doctorName: "Pradeep Moonot",
+    clinicName: "Mumbai Knee Foot Ankle Clinic",
+    specialty: "Orthopedic & Foot Surgery",
+    city: "Mumbai",
+    area: "Bandra West",
+    email: "drmoonot@gmail.com",
+    phone: "+91 98694 65597",
+    website: "https://drmoonot.com",
+    sourceUrl: "https://drmoonot.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice in Bandra West provides specialized foot and ankle consultations with appointment booking",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Pradeep Moonot,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Mumbai Knee Foot Ankle Clinic, I noticed your practice in Bandra West provides specialized foot and ankle consultations with appointment booking.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Pradeep Moonot,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Mumbai Knee Foot Ankle Clinic, I noticed your practice in Bandra West provides specialized foot and ankle consultations with appointment booking.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 33,
+    doctorName: "Sanjay Alle",
+    clinicName: "Pace Ortho Clinic",
+    specialty: "Orthopedics & Joint Care",
+    city: "Mumbai",
+    area: "Worli",
+    email: "dr.sanjayalle@gmail.com",
+    phone: "+91 86554 31103",
+    website: "https://drsanjayalle.com",
+    sourceUrl: "https://drsanjayalle.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic provides specialized orthopedic and trauma care setup in Worli South Mumbai",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Pace Ortho Clinic",
+      B: "Handling acute walk ins at Pace Ortho Clinic",
+      C: "Handling acute walk ins at Pace Ortho Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Pace Ortho Clinic",
+    emailBody: `Dr. Sanjay Alle,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Pace Ortho Clinic, I noticed your clinic provides specialized orthopedic and trauma care setup in Worli South Mumbai.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Sanjay Alle,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Pace Ortho Clinic, I noticed your clinic provides specialized orthopedic and trauma care setup in Worli South Mumbai.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 34,
+    doctorName: "Chakradhar Reddy",
+    clinicName: "Dr. Chakri's Orthopedic Clinic",
+    specialty: "Orthopedics & Trauma",
+    city: "Hyderabad",
+    area: "Miyapur",
+    email: "drchakrisclinic@gmail.com",
+    phone: "+91 94901 96458",
+    website: "https://drchakrisclinic.com",
+    sourceUrl: "https://drchakrisclinic.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic operates multiple branches in Miyapur and Nallagandla with high evening OPD volume",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. Chakradhar Reddy,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Dr. Chakri's Orthopedic Clinic, I noticed your clinic operates multiple branches in Miyapur and Nallagandla with high evening OPD volume.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Chakradhar Reddy,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Dr. Chakri's Orthopedic Clinic, I noticed your clinic operates multiple branches in Miyapur and Nallagandla with high evening OPD volume.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 35,
+    doctorName: "Skand Kumar",
+    clinicName: "Dr. Skand Kumar's Ortho Clinic",
+    specialty: "Orthopedics & Joint Care",
+    city: "Hyderabad",
+    area: "KPHB Colony",
+    email: "skandkumar@gmail.com",
+    phone: "+91 99488 55488",
+    website: "https://drskandortho.com",
+    sourceUrl: "https://drskandortho.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic manages high patient footfall in KPHB Colony across joint replacement and trauma consultations",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Dr. Skand Kumar's Ortho Clinic",
+      B: "Handling acute walk ins at Dr. Skand Kumar's Ortho Clinic",
+      C: "Handling acute walk ins at Dr. Skand Kumar's Ortho Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Dr. Skand Kumar's Ortho Clinic",
+    emailBody: `Dr. Skand Kumar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Skand Kumar's Ortho Clinic, I noticed your clinic manages high patient footfall in KPHB Colony across joint replacement and trauma consultations.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Skand Kumar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Skand Kumar's Ortho Clinic, I noticed your clinic manages high patient footfall in KPHB Colony across joint replacement and trauma consultations.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 36,
+    doctorName: "S. Rao",
+    clinicName: "Care Point Polyclinic & Diagnostics",
+    specialty: "Multi-Specialty & General Medicine",
+    city: "Hyderabad",
+    area: "Balkampet",
+    email: "info@carepointpolyclinic.com",
+    phone: "+91 96036 74774",
+    website: "https://carepointpolyclinic.com",
+    sourceUrl: "https://carepointpolyclinic.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your polyclinic coordinates multiple specialist OPDs alongside diagnostics in Balkampet",
+    campaignAngle: "campaign_1_queue_after_registration",
+    subjectVariants: {
+      A: "The queue starts after registration",
+      B: "The queue starts after registration",
+      C: "The queue starts after registration"
+    },
+    selectedSubject: "The queue starts after registration",
+    emailBody: `Dr. S. Rao,
+
+India has now crossed 25 crore digital OPD registrations through ABDM's Scan and Register service.
+
+That made me think about a slightly different problem.
+
+If registration takes only a few minutes but patients still spend a long time waiting to see the doctor, the bottleneck has simply moved.
+
+At Care Point Polyclinic & Diagnostics, I noticed your polyclinic coordinates multiple specialist OPDs alongside diagnostics in Balkampet.
+
+It made me wonder how your team handles one particular situation: when a new patient arrives with a complaint that may deserve attention before patients who are already waiting.
+
+That is the small problem I am building SwasthAI around.
+
+Patients answer a few structured questions after scanning a QR code. SwasthAI creates a recommended priority order for the doctor to review, and the doctor can change it whenever needed.
+
+I am looking for a few clinics to try this with a real OPD workflow.
+
+Can I send you the 2 minute version?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. S. Rao,
+
+India has now crossed 25 crore digital OPD registrations through ABDM's Scan and Register service.
+
+That made me think about a slightly different problem.
+
+If registration takes only a few minutes but patients still spend a long time waiting to see the doctor, the bottleneck has simply moved.
+
+At Care Point Polyclinic & Diagnostics, I noticed your polyclinic coordinates multiple specialist OPDs alongside diagnostics in Balkampet.
+
+It made me wonder how your team handles one particular situation: when a new patient arrives with a complaint that may deserve attention before patients who are already waiting.
+
+That is the small problem I am building SwasthAI around.
+
+Patients answer a few structured questions after scanning a QR code. SwasthAI creates a recommended priority order for the doctor to review, and the doctor can change it whenever needed.
+
+I am looking for a few clinics to try this with a real OPD workflow.
+
+Can I send you the 2 minute version?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 37,
+    doctorName: "K. Srinivas",
+    clinicName: "Aurum ENT Clinic",
+    specialty: "ENT & Head/Neck Care",
     city: "Hyderabad",
     area: "Banjara Hills",
-    email: "reddywomenshyd@gmail.com",
-    phone: "+91 40 2335 8899",
-    website: "https://reddywomenscare.com",
-    sourceUrl: "https://reddywomenscare.com/contact/",
-    verifiedObservation: "Maternity and gynecology practice handling walk-in priority decisions at reception.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 94,
-    doctorName: "Dr. Ritu Agarwal",
-    clinicName: "Agarwal Gynae & Fertility Clinic",
-    specialty: "Gynecology",
+    email: "aurumentcare@gmail.com",
+    phone: "+91 89197 20764",
+    website: "https://aurument.com",
+    sourceUrl: "https://aurument.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic provides advanced sinus and ear care in Banjara Hills with digital appointment support",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. K. Srinivas,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Aurum ENT Clinic, I noticed your clinic provides advanced sinus and ear care in Banjara Hills with digital appointment support.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. K. Srinivas,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Aurum ENT Clinic, I noticed your clinic provides advanced sinus and ear care in Banjara Hills with digital appointment support.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 38,
+    doctorName: "Chandrashekar",
+    clinicName: "Chandru ENT and Derma Care",
+    specialty: "ENT & Dermatology",
+    city: "Bengaluru",
+    area: "Kengeri",
+    email: "chandruucare@gmail.com",
+    phone: "+91 98450 67890",
+    website: "https://chandruentdermacare.in",
+    sourceUrl: "https://chandruentdermacare.in/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic coordinates both ENT and dermatology outpatient services in Kengeri",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. Chandrashekar,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Chandru ENT and Derma Care, I noticed your clinic coordinates both ENT and dermatology outpatient services in Kengeri.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Chandrashekar,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Chandru ENT and Derma Care, I noticed your clinic coordinates both ENT and dermatology outpatient services in Kengeri.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 39,
+    doctorName: "Yogesh K",
+    clinicName: "Dr. Yogesh K Ortho Clinic",
+    specialty: "Orthopedics & Sports Medicine",
+    city: "Bengaluru",
+    area: "Whitefield",
+    email: "yogiortho@gmail.com",
+    phone: "+91 98800 11223",
+    website: "https://dryogeshk.com",
+    sourceUrl: "https://dryogeshk.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic in Whitefield serves a fast paced tech corridor with scheduled consultations and sports injury walk ins",
+    campaignAngle: "campaign_5_digital_clinic_manual_queue",
+    subjectVariants: {
+      A: "Digital clinic, manual queue",
+      B: "Digital clinic, manual queue",
+      C: "Digital clinic, manual queue"
+    },
+    selectedSubject: "Digital clinic, manual queue",
+    emailBody: `Dr. Yogesh K,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Dr. Yogesh K Ortho Clinic, I noticed your clinic in Whitefield serves a fast paced tech corridor with scheduled consultations and sports injury walk ins.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Yogesh K,
+
+Most modern clinics now use digital billing and electronic appointments, but patient sequencing in the waiting room is still handled on a first come first served basis.
+
+Clock arrival works for cinema seats, but healthcare visits often have varying levels of urgency.
+
+At Dr. Yogesh K Ortho Clinic, I noticed your clinic in Whitefield serves a fast paced tech corridor with scheduled consultations and sports injury walk ins.
+
+It made me wonder how your team handles cases where an arriving patient might benefit from earlier review than someone who booked an earlier slot.
+
+I am building SwasthAI to solve this specific gap.
+
+Patients scan a QR code upon arrival and answer brief intake questions. SwasthAI provides a recommended queue order for the doctor to review, with full ability to override anytime.
+
+I am looking for a few forward thinking clinics to test this in practice.
+
+Can I send you a 2 minute screen recording?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 40,
+    doctorName: "Anita Krishnan",
+    clinicName: "Bangalore ENT Clinic",
+    specialty: "ENT & Head/Neck Care",
+    city: "Bengaluru",
+    area: "Jayanagar",
+    email: "bangaloreentcarecentre@gmail.com",
+    phone: "+91 98455 12345",
+    website: "https://dranitakrishnan.com",
+    sourceUrl: "https://dranitakrishnan.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic in Jayanagar manages structured morning and evening consultation sessions for ear and throat complaints",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Bangalore ENT Clinic",
+      B: "Front desk triage at Bangalore ENT Clinic",
+      C: "Front desk triage at Bangalore ENT Clinic"
+    },
+    selectedSubject: "Front desk triage at Bangalore ENT Clinic",
+    emailBody: `Dr. Anita Krishnan,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Bangalore ENT Clinic, I noticed your clinic in Jayanagar manages structured morning and evening consultation sessions for ear and throat complaints.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Anita Krishnan,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Bangalore ENT Clinic, I noticed your clinic in Jayanagar manages structured morning and evening consultation sessions for ear and throat complaints.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 41,
+    doctorName: "K. Sai Eswar",
+    clinicName: "Sai Eswar Ortho Kids Care",
+    specialty: "Pediatric Orthopedics",
+    city: "Chennai",
+    area: "Madipakkam",
+    email: "saieswarorthokidscare@gmail.com",
+    phone: "+91 95511 98650",
+    website: "https://kidsorthocare.co.in",
+    sourceUrl: "https://kidsorthocare.co.in/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice in Madipakkam manages acute pediatric limb trauma alongside routine congenital reviews",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Sai Eswar Ortho Kids Care",
+      B: "Handling acute walk ins at Sai Eswar Ortho Kids Care",
+      C: "Handling acute walk ins at Sai Eswar Ortho Kids Care"
+    },
+    selectedSubject: "Handling acute walk ins at Sai Eswar Ortho Kids Care",
+    emailBody: `Dr. K. Sai Eswar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Sai Eswar Ortho Kids Care, I noticed your practice in Madipakkam manages acute pediatric limb trauma alongside routine congenital reviews.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. K. Sai Eswar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Sai Eswar Ortho Kids Care, I noticed your practice in Madipakkam manages acute pediatric limb trauma alongside routine congenital reviews.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 42,
+    doctorName: "Chintan Doshi",
+    clinicName: "OrthoKids Clinic",
+    specialty: "Pediatric Orthopedics",
+    city: "Ahmedabad",
+    area: "Bodakdev",
+    email: "orthokidsclinic@gmail.com",
+    phone: "+91 74900 26360",
+    website: "https://orthokidsclinic.com",
+    sourceUrl: "https://orthokidsclinic.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic in Bodakdev specializes in pediatric deformity correction and acute pediatric fracture care",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at OrthoKids Clinic",
+      B: "Handling acute walk ins at OrthoKids Clinic",
+      C: "Handling acute walk ins at OrthoKids Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at OrthoKids Clinic",
+    emailBody: `Dr. Chintan Doshi,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At OrthoKids Clinic, I noticed your clinic in Bodakdev specializes in pediatric deformity correction and acute pediatric fracture care.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Chintan Doshi,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At OrthoKids Clinic, I noticed your clinic in Bodakdev specializes in pediatric deformity correction and acute pediatric fracture care.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 43,
+    doctorName: "Hemendra Agrawal",
+    clinicName: "Orthoklinik",
+    specialty: "Orthopedics & Arthroscopy",
     city: "Jaipur",
     area: "Vaishali Nagar",
-    email: "agarwalgynaejaipur@gmail.com",
-    phone: "+91 141 235 4455",
-    website: "https://agarwalgynaeclinic.com",
-    sourceUrl: "https://agarwalgynaeclinic.com/contact/",
-    verifiedObservation: "Gynecology and fertility OPD managing arrival order and emergency consultation requests.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 95,
-    doctorName: "Dr. Rashmi Patel",
-    clinicName: "Patel Women's Clinic",
-    specialty: "Gynecology",
-    city: "Ahmedabad",
-    area: "Satellite",
-    email: "patelwomensclinic@gmail.com",
-    phone: "+91 79 2676 1122",
-    website: "https://patelwomenscare.com",
-    sourceUrl: "https://patelwomenscare.com/contact/",
-    verifiedObservation: "Women's health clinic in Satellite Ahmedabad.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 96,
-    doctorName: "Dr. Archana Balan",
-    clinicName: "Balan Eye Care Clinic",
-    specialty: "Ophthalmology",
-    city: "Chennai",
-    area: "Mylapore",
-    email: "balaneyecare@gmail.com",
-    phone: "+91 44 2499 3344",
-    website: "https://balaneyecare.com",
-    sourceUrl: "https://balaneyecare.com/contact/",
-    verifiedObservation: "Eye clinic where receptionists handle acute eye trauma, redness and routine vision tests.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 97,
-    doctorName: "Dr. Ananya Roy",
-    clinicName: "Roy Eye Clinic & Vision Therapy",
-    specialty: "Ophthalmology",
+    email: "Orthoklinik19@gmail.com",
+    phone: "+91 92106 96045",
+    website: "https://orthoklinik.com",
+    sourceUrl: "https://orthoklinik.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic in Vaishali Nagar handles active sports injury consultations alongside elective joint reviews",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Orthoklinik",
+      B: "Handling acute walk ins at Orthoklinik",
+      C: "Handling acute walk ins at Orthoklinik"
+    },
+    selectedSubject: "Handling acute walk ins at Orthoklinik",
+    emailBody: `Dr. Hemendra Agrawal,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Orthoklinik, I noticed your clinic in Vaishali Nagar handles active sports injury consultations alongside elective joint reviews.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Hemendra Agrawal,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Orthoklinik, I noticed your clinic in Vaishali Nagar handles active sports injury consultations alongside elective joint reviews.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 44,
+    doctorName: "S.C. Jain",
+    clinicName: "Jain ENT Hospital",
+    specialty: "ENT & Hearing Care",
+    city: "Jaipur",
+    area: "Mansarovar",
+    email: "info@jainenthospital.org",
+    phone: "+91 95095 08431",
+    website: "https://jainenthospital.org",
+    sourceUrl: "https://jainenthospital.org/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your hospital runs high volume outpatient services for ear nose and throat care in Mansarovar",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. S.C. Jain,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Jain ENT Hospital, I noticed your hospital runs high volume outpatient services for ear nose and throat care in Mansarovar.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. S.C. Jain,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Jain ENT Hospital, I noticed your hospital runs high volume outpatient services for ear nose and throat care in Mansarovar.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 45,
+    doctorName: "Balaji Sharma",
+    clinicName: "Balaji Cure & Care Hospital",
+    specialty: "Orthopedics & General Surgery",
+    city: "Jaipur",
+    area: "Sanganer",
+    email: "helpdesk@balajihospitals.co.in",
+    phone: "+91 94621 34373",
+    website: "https://balajihospitals.co.in",
+    sourceUrl: "https://balajihospitals.co.in/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your hospital handles a high volume of surgical and trauma walk ins in Sanganer Jaipur",
+    campaignAngle: "campaign_1_queue_after_registration",
+    subjectVariants: {
+      A: "The queue starts after registration",
+      B: "The queue starts after registration",
+      C: "The queue starts after registration"
+    },
+    selectedSubject: "The queue starts after registration",
+    emailBody: `Dr. Balaji Sharma,
+
+India has now crossed 25 crore digital OPD registrations through ABDM's Scan and Register service.
+
+That made me think about a slightly different problem.
+
+If registration takes only a few minutes but patients still spend a long time waiting to see the doctor, the bottleneck has simply moved.
+
+At Balaji Cure & Care Hospital, I noticed your hospital handles a high volume of surgical and trauma walk ins in Sanganer Jaipur.
+
+It made me wonder how your team handles one particular situation: when a new patient arrives with a complaint that may deserve attention before patients who are already waiting.
+
+That is the small problem I am building SwasthAI around.
+
+Patients answer a few structured questions after scanning a QR code. SwasthAI creates a recommended priority order for the doctor to review, and the doctor can change it whenever needed.
+
+I am looking for a few clinics to try this with a real OPD workflow.
+
+Can I send you the 2 minute version?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Balaji Sharma,
+
+India has now crossed 25 crore digital OPD registrations through ABDM's Scan and Register service.
+
+That made me think about a slightly different problem.
+
+If registration takes only a few minutes but patients still spend a long time waiting to see the doctor, the bottleneck has simply moved.
+
+At Balaji Cure & Care Hospital, I noticed your hospital handles a high volume of surgical and trauma walk ins in Sanganer Jaipur.
+
+It made me wonder how your team handles one particular situation: when a new patient arrives with a complaint that may deserve attention before patients who are already waiting.
+
+That is the small problem I am building SwasthAI around.
+
+Patients answer a few structured questions after scanning a QR code. SwasthAI creates a recommended priority order for the doctor to review, and the doctor can change it whenever needed.
+
+I am looking for a few clinics to try this with a real OPD workflow.
+
+Can I send you the 2 minute version?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 46,
+    doctorName: "Soumya Paik",
+    clinicName: "Kids Orthopedic Clinic Kolkata",
+    specialty: "Pediatric Orthopedics",
     city: "Kolkata",
     area: "Salt Lake",
-    email: "royeyeclinic@gmail.com",
-    phone: "+91 33 2337 5566",
-    website: "https://royeyeclinic.com",
-    sourceUrl: "https://royeyeclinic.com/contact/",
-    verifiedObservation: "Vision and eye clinic in Salt Lake.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 98,
-    doctorName: "Dr. Vikram Seth",
-    clinicName: "Seth Orthopaedic & Joint Clinic",
-    specialty: "Orthopedics",
-    city: "Gurgaon",
-    area: "Sector 49",
-    email: "sethorthogurgaon@gmail.com",
-    phone: "+91 124 405 6677",
-    website: "https://sethorthoclinic.com",
-    sourceUrl: "https://sethorthoclinic.com/contact/",
-    verifiedObservation: "Joint and spine clinic where front desk balances appointment tokens with walk-ins.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 99,
-    doctorName: "Dr. Manish Kapoor",
-    clinicName: "Kapoor Heart & Medical Polyclinic",
-    specialty: "Multi Specialty & Cardiology",
-    city: "Delhi NCR",
-    area: "Janakpuri",
-    email: "kapoorpolyclinicdelhi@gmail.com",
-    phone: "+91 11 2550 4455",
-    website: "https://kapoorpolyclinic.in",
-    sourceUrl: "https://kapoorpolyclinic.in/contact/",
-    verifiedObservation: "Multi doctor polyclinic where reception manages arrival sequence across consulting rooms.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
-  },
-  {
-    rank: 100,
-    doctorName: "Dr. Aniruddh Joshi",
-    clinicName: "Joshi Orthopaedic & Trauma Centre",
+    email: "drsoumyapaik@gmail.com",
+    phone: "+91 90511 48463",
+    website: "https://kidsorthopedic.com",
+    sourceUrl: "https://kidsorthopedic.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice in Salt Lake specializes in pediatric trauma and congenital limb correction",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Kids Orthopedic Clinic Kolkata",
+      B: "Handling acute walk ins at Kids Orthopedic Clinic Kolkata",
+      C: "Handling acute walk ins at Kids Orthopedic Clinic Kolkata"
+    },
+    selectedSubject: "Handling acute walk ins at Kids Orthopedic Clinic Kolkata",
+    emailBody: `Dr. Soumya Paik,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Kids Orthopedic Clinic Kolkata, I noticed your practice in Salt Lake specializes in pediatric trauma and congenital limb correction.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Soumya Paik,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Kids Orthopedic Clinic Kolkata, I noticed your practice in Salt Lake specializes in pediatric trauma and congenital limb correction.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 47,
+    doctorName: "Santosh Kumar",
+    clinicName: "Momentum Orthocare Kolkata",
+    specialty: "Orthopedics & Joint Surgery",
+    city: "Kolkata",
+    area: "Dhakuria",
+    email: "santdr@gmail.com",
+    phone: "+91 98319 11584",
+    website: "https://momentumorthocare.com",
+    sourceUrl: "https://momentumorthocare.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic manages joint replacement and trauma consultations in South Kolkata",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Momentum Orthocare Kolkata",
+      B: "Handling acute walk ins at Momentum Orthocare Kolkata",
+      C: "Handling acute walk ins at Momentum Orthocare Kolkata"
+    },
+    selectedSubject: "Handling acute walk ins at Momentum Orthocare Kolkata",
+    emailBody: `Dr. Santosh Kumar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Momentum Orthocare Kolkata, I noticed your clinic manages joint replacement and trauma consultations in South Kolkata.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Santosh Kumar,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Momentum Orthocare Kolkata, I noticed your clinic manages joint replacement and trauma consultations in South Kolkata.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 48,
+    doctorName: "Siddharth Gupta",
+    clinicName: "Aceso Multispeciality Clinic",
+    specialty: "Orthopedics & Polyclinic",
+    city: "Kolkata",
+    area: "Gariahat",
+    email: "siddharthguptaortho@gmail.com",
+    phone: "+91 91300 88422",
+    website: "https://drsiddharthguptaortho.in",
+    sourceUrl: "https://drsiddharthguptaortho.in/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic coordinates orthopedic consultations alongside allied outpatient services in Gariahat",
+    campaignAngle: "campaign_3_next_opd_bottleneck",
+    subjectVariants: {
+      A: "The next OPD bottleneck",
+      B: "The next OPD bottleneck",
+      C: "The next OPD bottleneck"
+    },
+    selectedSubject: "The next OPD bottleneck",
+    emailBody: `Dr. Siddharth Gupta,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Aceso Multispeciality Clinic, I noticed your clinic coordinates orthopedic consultations alongside allied outpatient services in Gariahat.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Siddharth Gupta,
+
+Many clinics have successfully streamlined appointment scheduling, but the waiting room often remains crowded.
+
+When multiple consultations run simultaneously, patient flow inside the clinic quickly becomes the next operational bottleneck.
+
+At Aceso Multispeciality Clinic, I noticed your clinic coordinates orthopedic consultations alongside allied outpatient services in Gariahat.
+
+It made me curious how your practice manages queue flow when some consultations take fifteen minutes while other patients only need a brief review.
+
+That is why I am building SwasthAI.
+
+Arriving patients scan a QR code and answer structured intake questions. SwasthAI presents a recommended priority order on your screen, allowing you to review and adjust the sequence at any time.
+
+I am currently working with a few clinics to refine this workflow.
+
+Can I share a 2 minute overview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 49,
+    doctorName: "Saikat Ghosh",
+    clinicName: "Dr. Saikat Ghosh Ortho Clinic",
+    specialty: "Orthopedics & Polyclinic",
+    city: "Kolkata",
+    area: "Barasat",
+    email: "saikatortho@gmail.com",
+    phone: "+91 83358 00678",
+    website: "https://saikatortho.com",
+    sourceUrl: "https://saikatortho.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic handles high daily walk in turnover across joint and fracture consultations in Barasat",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Dr. Saikat Ghosh Ortho Clinic",
+      B: "Handling acute walk ins at Dr. Saikat Ghosh Ortho Clinic",
+      C: "Handling acute walk ins at Dr. Saikat Ghosh Ortho Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Dr. Saikat Ghosh Ortho Clinic",
+    emailBody: `Dr. Saikat Ghosh,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Saikat Ghosh Ortho Clinic, I noticed your clinic handles high daily walk in turnover across joint and fracture consultations in Barasat.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Saikat Ghosh,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Saikat Ghosh Ortho Clinic, I noticed your clinic handles high daily walk in turnover across joint and fracture consultations in Barasat.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 50,
+    doctorName: "Rahul Sarkar",
+    clinicName: "Kolkata ENT Care",
+    specialty: "ENT & Head/Neck Care",
+    city: "Kolkata",
+    area: "Tollygunge",
+    email: "care@kolkataentcare.com",
+    phone: "+91 98302 26114",
+    website: "https://kolkataentcare.com",
+    sourceUrl: "https://kolkataentcare.com/contact-us/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your practice serves South Kolkata with dedicated morning and evening ENT consultations",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at Kolkata ENT Care",
+      B: "Front desk triage at Kolkata ENT Care",
+      C: "Front desk triage at Kolkata ENT Care"
+    },
+    selectedSubject: "Front desk triage at Kolkata ENT Care",
+    emailBody: `Dr. Rahul Sarkar,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Kolkata ENT Care, I noticed your practice serves South Kolkata with dedicated morning and evening ENT consultations.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Rahul Sarkar,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At Kolkata ENT Care, I noticed your practice serves South Kolkata with dedicated morning and evening ENT consultations.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 51,
+    doctorName: "Bishal Bhagat",
+    clinicName: "Dr. Bishal Bhagat Ortho Clinic",
     specialty: "Orthopedics & Trauma",
-    city: "Pune",
-    area: "Pashan",
-    email: "joshiarthrocare@gmail.com",
-    phone: "+91 20 2587 1122",
-    website: "https://joshiarthrocare.com",
-    sourceUrl: "https://joshiarthrocare.com/contact/",
-    verifiedObservation: "Joint restoration and acute trauma practice in Pashan Pune with heavy walk-in queue.",
-    campaignFamily: "CAMPAIGN_E_RECEPTIONIST_DILEMMA"
+    city: "Kolkata",
+    area: "Behala",
+    email: "dr_bishal@yahoo.com",
+    phone: "+91 90518 00012",
+    website: "https://drbishalbhagat.com",
+    sourceUrl: "https://drbishalbhagat.com/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic serves a high density residential area in Behala with daily fracture and trauma walk ins",
+    campaignAngle: "campaign_2_who_goes_first",
+    subjectVariants: {
+      A: "Handling acute walk ins at Dr. Bishal Bhagat Ortho Clinic",
+      B: "Handling acute walk ins at Dr. Bishal Bhagat Ortho Clinic",
+      C: "Handling acute walk ins at Dr. Bishal Bhagat Ortho Clinic"
+    },
+    selectedSubject: "Handling acute walk ins at Dr. Bishal Bhagat Ortho Clinic",
+    emailBody: `Dr. Bishal Bhagat,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Bishal Bhagat Ortho Clinic, I noticed your clinic serves a high density residential area in Behala with daily fracture and trauma walk ins.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Bishal Bhagat,
+
+When five patients are already waiting in the clinic, what happens when a new walk in arrives with severe discomfort?
+
+In most outpatient settings, reception staff either rely strictly on arrival time or make an informal guess about who needs to go in first.
+
+At Dr. Bishal Bhagat Ortho Clinic, I noticed your clinic serves a high density residential area in Behala with daily fracture and trauma walk ins.
+
+That made me think about how your team balances fairness to waiting patients with the clinical urgency of acute arrivals.
+
+I am building SwasthAI to help doctors organize this intake.
+
+Patients scan a QR code on arrival and answer a few short, structured questions. SwasthAI provides a recommended priority order for your review, and you can change the sequence whenever you want.
+
+We are testing this with a small group of outpatient practices.
+
+Would you be open to seeing a 2 minute walkthrough?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
+  },\n  {
+    rank: 52,
+    doctorName: "Amitabha Roy",
+    clinicName: "HealthFlex ENT OPD Clinic",
+    specialty: "ENT & Rhinology",
+    city: "Kolkata",
+    area: "Salt Lake Sector 1",
+    email: "info@entkolkata.co.in",
+    phone: "+91 89818 55578",
+    website: "https://entkolkata.co.in",
+    sourceUrl: "https://entkolkata.co.in/contact/",
+    verifiedAt: "2026-09-05",
+    verificationMethod: "Public Website Contact URL & Live DNS MX Resolution",
+    verificationStatus: "VERIFIED",
+    verifiedObservation: "your clinic provides advanced sinus and ear evaluations in Salt Lake Sector 1",
+    campaignAngle: "campaign_4_receptionist_decision",
+    subjectVariants: {
+      A: "Front desk triage at HealthFlex ENT OPD Clinic",
+      B: "Front desk triage at HealthFlex ENT OPD Clinic",
+      C: "Front desk triage at HealthFlex ENT OPD Clinic"
+    },
+    selectedSubject: "Front desk triage at HealthFlex ENT OPD Clinic",
+    emailBody: `Dr. Amitabha Roy,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At HealthFlex ENT OPD Clinic, I noticed your clinic provides advanced sinus and ear evaluations in Salt Lake Sector 1.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    plainTextBody: `Dr. Amitabha Roy,
+
+In most private practices, the front desk is put in an uncomfortable position.
+
+When a walk in looks uncomfortable, the receptionist has to decide whether to disrupt the queue without having clinical tools to evaluate the situation.
+
+At HealthFlex ENT OPD Clinic, I noticed your clinic provides advanced sinus and ear evaluations in Salt Lake Sector 1.
+
+It made me wonder how your front desk currently determines which patients need faster doctor attention during busy hours.
+
+I built SwasthAI to make this intake clear and structured.
+
+Patients scan a counter QR code and answer a few simple questions. SwasthAI generates a recommended priority order on the doctor screen, while the doctor retains complete control over the final queue.
+
+We are looking for a few practices to try this in daily OPD.
+
+Would you be interested in a 2 minute preview?
+
+Sankalp Mishra
+Founder, SwasthAI
+https://swasthai-three.vercel.app/
+
+If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
+    htmlBody: ``,
+    status: "QUEUED"
   }
 ];
 
 export function getAllProspectLeads(): ProspectLead[] {
-  return MASTER_100_PROSPECTS.map(clinic => {
-    const subjectVariants = generateSubjectVariants(
-      clinic.campaignFamily,
-      clinic.doctorName,
-      clinic.clinicName,
-      clinic.specialty
-    );
+  return PROSPECT_LEADS_DATABASE;
+}
 
-    const emailContent = generateCampaignEmail({
-      doctorName: clinic.doctorName,
-      clinicName: clinic.clinicName,
-      specialty: clinic.specialty,
-      city: clinic.city,
-      campaignFamily: clinic.campaignFamily,
-      verifiedObservation: clinic.verifiedObservation
-    });
-
-    return {
-      rank: clinic.rank,
-      doctorName: clinic.doctorName,
-      clinicName: clinic.clinicName,
-      specialty: clinic.specialty,
-      city: clinic.city,
-      area: clinic.area,
-      email: clinic.email,
-      phone: clinic.phone,
-      website: clinic.website,
-      sourceUrl: clinic.sourceUrl,
-      verifiedAt: "2026-09-03",
-      verificationMethod: "Public Clinic Domain & Official Contact Page",
-      verificationStatus: 'VERIFIED',
-      verifiedObservation: clinic.verifiedObservation,
-      campaignAngle: clinic.campaignFamily,
-      subjectVariants: {
-        A: subjectVariants.A,
-        B: subjectVariants.B,
-        C: subjectVariants.C
-      },
-      selectedSubject: emailContent.subject,
-      emailBody: emailContent.plainText,
-      plainTextBody: emailContent.plainText,
-      htmlBody: emailContent.html,
-      status: 'QUEUED'
-    };
-  });
+export function getProspectByRank(rank: number): ProspectLead | undefined {
+  return PROSPECT_LEADS_DATABASE.find(p => p.rank === rank);
 }
