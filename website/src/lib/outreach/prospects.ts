@@ -71,7 +71,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 2,
     doctorName: "Atul Sonawane",
     clinicName: "Sonawane Orthocare Clinic",
@@ -141,7 +142,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 3,
     doctorName: "Rohit Chakor",
     clinicName: "The Bone & Joint Clinic",
@@ -211,7 +213,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 4,
     doctorName: "Sandeep Kadam",
     clinicName: "Radhey Children's Clinic",
@@ -281,7 +284,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 5,
     doctorName: "Anuradha Patil",
     clinicName: "Neo Skin And Hair Clinic",
@@ -351,7 +355,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 6,
     doctorName: "Ajinkya Kelkar",
     clinicName: "Auricle ENT Care Clinic",
@@ -421,7 +426,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 7,
     doctorName: "Vishal Harangulkar",
     clinicName: "Dr. Vishal Harangulkar Pediatric Clinic",
@@ -491,7 +497,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 8,
     doctorName: "Ropana Sharma",
     clinicName: "Ropana Fertility & Gynaecology Clinic",
@@ -561,7 +568,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 9,
     doctorName: "Arundhati Sidhaye",
     clinicName: "Vision Eye Center Pune",
@@ -631,7 +639,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 10,
     doctorName: "Ruchi Bhirud",
     clinicName: "Dr. Ruchi Skin Expert",
@@ -701,7 +710,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 11,
     doctorName: "Bhalerao",
     clinicName: "Bhalerao ENT Hospital",
@@ -771,7 +781,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 12,
     doctorName: "Sandeep Kr. Garg",
     clinicName: "Aliganj Orthopaedic & Arthroscopy Centre",
@@ -841,7 +852,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 13,
     doctorName: "Manish Khanna",
     clinicName: "Apley Orthopaedic Centre",
@@ -911,7 +923,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 14,
     doctorName: "Utkarsh Bansal",
     clinicName: "Matratva Child Clinic",
@@ -981,7 +994,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 15,
     doctorName: "Muni Varma",
     clinicName: "Dr. Muni Varma Pediatric Surgery Clinic",
@@ -1051,7 +1065,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 16,
     doctorName: "Vinay Ratan",
     clinicName: "Dr. Vinay ENT Clinic",
@@ -1121,7 +1136,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 17,
     doctorName: "Shafali Yadav",
     clinicName: "Dr. Shafali Yadav Dermatology Clinic",
@@ -1191,7 +1207,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 18,
     doctorName: "Devanshi Gupta",
     clinicName: "Dr. Devanshi Gupta Gynae Clinic",
@@ -1261,7 +1278,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 19,
     doctorName: "R.K. Sharma",
     clinicName: "Krishna Medical Centre",
@@ -1331,7 +1349,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 21,
     doctorName: "Jyoti Prakash",
     clinicName: "Jyoti ENT Clinic",
@@ -1401,7 +1420,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 22,
     doctorName: "Pritish Singh",
     clinicName: "Little Bones Clinic",
@@ -1471,7 +1491,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 23,
     doctorName: "Nikhil Sharma",
     clinicName: "Ace Orthopedic Clinic",
@@ -1541,7 +1562,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 24,
     doctorName: "Prince Gupta",
     clinicName: "Dr. Prince Gupta Joint Solutions",
@@ -1611,7 +1633,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 25,
     doctorName: "J.P. Arya",
     clinicName: "Arya ENT & Skin Clinic",
@@ -1681,7 +1704,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 26,
     doctorName: "Ankur Gupta",
     clinicName: "Essense Clinic",
@@ -1751,7 +1775,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 27,
     doctorName: "Nayeem Ahmad Siddiqui",
     clinicName: "Dr. Nayeem Ahmad ENT Centre",
@@ -1821,7 +1846,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 28,
     doctorName: "Angela Mishra",
     clinicName: "Dr. Angela Mishra Advanced ENT Clinic",
@@ -1891,7 +1917,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 30,
     doctorName: "Gautam Banga",
     clinicName: "SCI International Hospital OPD",
@@ -1965,7 +1992,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 31,
     doctorName: "Atul Bhaskar",
     clinicName: "Children's Speciality Orthopaedic Clinic",
@@ -2035,7 +2063,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 32,
     doctorName: "Pradeep Moonot",
     clinicName: "Mumbai Knee Foot Ankle Clinic",
@@ -2105,7 +2134,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 33,
     doctorName: "Sanjay Alle",
     clinicName: "Pace Ortho Clinic",
@@ -2175,7 +2205,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 34,
     doctorName: "Chakradhar Reddy",
     clinicName: "Dr. Chakri's Orthopedic Clinic",
@@ -2245,7 +2276,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 35,
     doctorName: "Skand Kumar",
     clinicName: "Dr. Skand Kumar's Ortho Clinic",
@@ -2315,7 +2347,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 36,
     doctorName: "S. Rao",
     clinicName: "Care Point Polyclinic & Diagnostics",
@@ -2389,7 +2422,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 37,
     doctorName: "K. Srinivas",
     clinicName: "Aurum ENT Clinic",
@@ -2459,7 +2493,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 38,
     doctorName: "Chandrashekar",
     clinicName: "Chandru ENT and Derma Care",
@@ -2529,7 +2564,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 39,
     doctorName: "Yogesh K",
     clinicName: "Dr. Yogesh K Ortho Clinic",
@@ -2599,7 +2635,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 40,
     doctorName: "Anita Krishnan",
     clinicName: "Bangalore ENT Clinic",
@@ -2669,7 +2706,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 41,
     doctorName: "K. Sai Eswar",
     clinicName: "Sai Eswar Ortho Kids Care",
@@ -2739,7 +2777,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 42,
     doctorName: "Chintan Doshi",
     clinicName: "OrthoKids Clinic",
@@ -2809,7 +2848,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 43,
     doctorName: "Hemendra Agrawal",
     clinicName: "Orthoklinik",
@@ -2879,7 +2919,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 44,
     doctorName: "S.C. Jain",
     clinicName: "Jain ENT Hospital",
@@ -2949,7 +2990,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 45,
     doctorName: "Balaji Sharma",
     clinicName: "Balaji Cure & Care Hospital",
@@ -3023,7 +3065,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 46,
     doctorName: "Soumya Paik",
     clinicName: "Kids Orthopedic Clinic Kolkata",
@@ -3093,7 +3136,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 47,
     doctorName: "Santosh Kumar",
     clinicName: "Momentum Orthocare Kolkata",
@@ -3163,7 +3207,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 48,
     doctorName: "Siddharth Gupta",
     clinicName: "Aceso Multispeciality Clinic",
@@ -3233,7 +3278,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 49,
     doctorName: "Saikat Ghosh",
     clinicName: "Dr. Saikat Ghosh Ortho Clinic",
@@ -3303,7 +3349,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 50,
     doctorName: "Rahul Sarkar",
     clinicName: "Kolkata ENT Care",
@@ -3373,7 +3420,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 51,
     doctorName: "Bishal Bhagat",
     clinicName: "Dr. Bishal Bhagat Ortho Clinic",
@@ -3443,7 +3491,8 @@ https://swasthai-three.vercel.app/
 If you would rather not receive emails from me, just reply "no" and I will not follow up.`,
     htmlBody: ``,
     status: "QUEUED"
-  },\n  {
+  },
+  {
     rank: 52,
     doctorName: "Amitabha Roy",
     clinicName: "HealthFlex ENT OPD Clinic",

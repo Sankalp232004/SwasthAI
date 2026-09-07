@@ -272,13 +272,14 @@ export function generateEmailContent(params: {
   city?: string;
   campaignHook?: string;
   campaign?: CampaignKey;
+  campaignFamily?: CampaignKey;
   verifiedObservation?: string;
 }): {
   subject: string;
   plainText: string;
   html: string;
 } {
-  const campaign = params.campaign || 'campaign_4_receptionist_decision';
+  const campaign = params.campaign || params.campaignFamily || 'campaign_4_receptionist_decision';
   const rendered = renderEmail({
     doctorName: params.doctorName,
     clinicName: params.clinicName,
@@ -294,4 +295,8 @@ export function generateEmailContent(params: {
     html: rendered.htmlContent
   };
 }
+
+export type CampaignFamily = CampaignKey;
+export const generateCampaignEmail = generateEmailContent;
+
 
