@@ -42,15 +42,16 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   }
 
   const url = `${SITE_CONFIG.url}/blog/${slug}`;
+  const seoTitle = post.seoTitle || `${post.title} | SwasthAI Blog`;
 
   return {
-    title: `${post.title} | SwasthAI Blog`,
+    title: post.seoTitle ? { absolute: post.seoTitle } : seoTitle,
     description: post.excerpt,
     authors: [{ name: post.author }],
     category: post.category,
     keywords: post.tags,
     openGraph: {
-      title: post.title,
+      title: post.seoTitle || post.title,
       description: post.excerpt,
       url,
       siteName: "SwasthAI",
@@ -68,7 +69,7 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: post.seoTitle || post.title,
       description: post.excerpt,
       images: [`${SITE_CONFIG.url}${post.featuredImage}`],
     },
@@ -85,6 +86,21 @@ const mdxComponents = {
   InformationGapVisual,
   SwasthAIWorkflowVisual,
   MidArticleCTA,
+  h1: () => null,
+  a: ({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+    const isExternal = href?.startsWith("http://") || href?.startsWith("https://");
+    return (
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className="text-teal-700 font-semibold underline hover:text-teal-900 transition-colors"
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
   h2: ({ children }: React.HTMLAttributes<HTMLHeadingElement>) => {
     const text = typeof children === "string" ? children : String(children);
     const id = text

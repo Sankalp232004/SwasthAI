@@ -6,6 +6,7 @@ import readingTime from "reading-time";
 export interface BlogPostMeta {
   slug: string;
   title: string;
+  seoTitle?: string;
   subtitle?: string;
   publishedAt: string;
   author: string;
@@ -80,6 +81,7 @@ export function getAllPosts(): BlogPostMeta[] {
         posts.push({
           slug,
           title: data.title || slug,
+          seoTitle: data.seoTitle || undefined,
           subtitle: data.subtitle || "",
           publishedAt: data.publishedAt || new Date().toISOString().split("T")[0],
           author: data.author || "Founder",
@@ -150,6 +152,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     return {
       slug,
       title: data.title || slug,
+      seoTitle: data.seoTitle || undefined,
       subtitle: data.subtitle || "",
       publishedAt: data.publishedAt || new Date().toISOString().split("T")[0],
       author: data.author || "Founder",
